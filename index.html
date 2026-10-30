@@ -1,0 +1,1421 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#0B2B45">
+<title>Pescão | Artigos para pesca em Cravinhos</title>
+<meta name="description" content="Molinetes, carretilhas, varas, iscas, linhas e anzóis. Compre pelo site e retire na loja, receba em Cravinhos ou peça o envio para outra cidade. R. Sante Pieri, 131, Cravinhos (SP).">
+<!-- DEMO: remover a linha abaixo quando publicar no dominio definitivo do cliente -->
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="img/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600..800&family=Onest:wght@400..700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Store",
+  "name": "Pescão - Pet Shop, Rações e Artigos para pesca",
+  "telephone": "+55-16-3951-4462",
+  "image": "img/fachada.webp",
+  "address": { "@type": "PostalAddress", "streetAddress": "R. Sante Pieri, 131 - Jardim Bela Vista", "addressLocality": "Cravinhos", "addressRegion": "SP", "postalCode": "14140-000", "addressCountry": "BR" },
+  "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.8", "reviewCount": "228" },
+  "sameAs": ["https://www.instagram.com/pescaocravinhos", "https://www.facebook.com/pescaocravinhos"]
+}
+</script>
+<style>
+  /* ============================================================
+     PESCAO - a loja de pesca do bairro, em azul de agua.
+     Azul do "o" do logo nos botoes, agua funda na faixa escura,
+     nevoa fria no fundo e o vermelho do "P" so na boia e nos selos.
+     O elemento da casa e a LINHA D'AGUA (onda entre as faixas)
+     com a BOIA boiando na entrada do "Monte seu equipamento".
+     ============================================================ */
+  :root {
+    /* "light dark" so para o Chrome nao escurecer o site sozinho; o body volta para o claro */
+    color-scheme: light dark;
+    --branco:   #FFFFFF;
+    --nevoa:    #EEF3F8;   /* fundo frio das faixas claras */
+    --nevoa-2:  #E1EBF5;
+    --agua:     #0B2B45;   /* agua funda: faixa escura e rodape */
+    --agua-2:   #133B5E;
+    --azul:     #1457C8;   /* o azul do logo: 6.4:1 no branco */
+    --azul-2:   #0F47A6;
+    --azul-claro: #DCE8F8;
+    --boia:     #D42A2F;   /* o vermelho do P: so boia e selos */
+    --tinta:    #12233A;
+    --tinta-2:  #4A5B6E;   /* 6.9:1 no branco */
+    --linha:    #D6E1EC;
+    --linha-forte: #8094AA;/* contorno de controle: 3:1 no branco */
+    --raio:     16px;
+
+    --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+    --ease-gaveta: cubic-bezier(0.32, 0.72, 0, 1);
+    --dur-entra: .7s;
+    --dur-ui: .22s;
+
+    --fonte: "Onest", "Onest reserva", Arial, sans-serif;
+    --fonte-titulo: "Bricolage Grotesque", "Bricolage reserva", "Arial Narrow", Arial, sans-serif;
+    --largura: 1240px;
+    --margem: clamp(16px, 4vw, 40px);
+  }
+  @font-face { font-family: "Onest reserva"; src: local("Arial"); size-adjust: 98%; }
+  @font-face { font-family: "Bricolage reserva"; src: local("Arial Bold"); size-adjust: 94%; }
+
+  /* ---------- base ---------- */
+  *, *::before, *::after { box-sizing: border-box; }
+  html { background: #FFFFFF; scrollbar-color: #9DB0C4 #FFFFFF; scroll-behavior: smooth; scroll-padding-top: 90px; -webkit-text-size-adjust: 100%; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  body { color-scheme: light; overflow-x: clip; margin: 0; background: var(--branco); color: var(--tinta); font: 400 1.0625rem/1.6 var(--fonte); -webkit-tap-highlight-color: transparent; }
+  img, svg { max-width: 100%; }
+  img { height: auto; }
+  [hidden] { display: none !important; }
+  figure, blockquote { margin: 0; }
+  a { color: var(--azul); text-underline-offset: .18em; }
+  a, button, input, select, label { touch-action: manipulation; }
+  :focus-visible { outline: 3px solid var(--azul); outline-offset: 3px; }
+  h1, h2, h3 { font-family: var(--fonte-titulo); font-weight: 750; line-height: 1.05; margin: 0; letter-spacing: -.02em; text-wrap: balance; overflow-wrap: break-word; color: var(--tinta); }
+  h2 { font-size: clamp(1.9rem, 1.35rem + 2.2vw, 2.9rem); }
+  h3 { font-size: 1.2rem; }
+  p { margin: 0; }
+  p, li, label, small, legend, .btn { overflow-wrap: anywhere; }
+  .envoltorio { max-width: var(--largura); margin-inline: auto; padding-inline: var(--margem); }
+  .so-leitor { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+  .pular { position: absolute; left: 1rem; top: -5rem; z-index: 60; padding: .8rem 1rem; background: var(--branco); color: var(--tinta); }
+  .pular:focus { top: 1rem; }
+
+  /* movimento padrao: revela ao rolar (uma vez) */
+  .com-js [data-revela] { opacity: 0; transform: translateY(16px); transition: opacity var(--dur-entra) var(--ease-out), transform var(--dur-entra) var(--ease-out); transition-delay: calc(var(--i, 0) * 70ms); }
+  .com-js [data-revela].visto { opacity: 1; transform: none; }
+  @media (prefers-reduced-motion: reduce) { .com-js [data-revela] { transform: none; transition: opacity .3s ease; transition-delay: 0s; } }
+
+  /* botoes */
+  .btn {
+    display: inline-flex; align-items: center; justify-content: center; gap: .55rem; max-width: 100%;
+    min-height: 52px; padding: .75rem 1.4rem; border: 0; border-radius: 12px;
+    background: var(--azul); color: #fff; font: 600 1rem/1.2 var(--fonte); text-decoration: none; text-align: center; cursor: pointer;
+    transition: background-color var(--dur-ui) ease, box-shadow var(--dur-ui) ease, color var(--dur-ui) ease, transform .12s var(--ease-out);
+  }
+  .btn:hover { background: var(--azul-2); }
+  .btn:active { transform: scale(.97); }
+  .btn svg { width: 1.25em; height: 1.25em; flex: none; }
+  .btn-branco { background: var(--branco); color: var(--tinta); }
+  .btn-branco:hover { background: var(--nevoa); }
+  .btn-linha { background: var(--branco); color: var(--tinta); box-shadow: inset 0 0 0 1.5px var(--linha-forte); }
+  .btn-linha:hover { background: var(--branco); box-shadow: inset 0 0 0 1.5px var(--tinta); }
+  .btn-zap { background: #12803B; color: #fff; }
+  .btn-zap:hover { background: #0E6A31; }
+  @media (prefers-reduced-motion: reduce) { .btn { transition: none; } .btn:active { transform: none; } }
+
+  /* ---------- topo ---------- */
+  .topo { position: sticky; top: 0; z-index: 30; background: var(--branco); border-bottom: 1px solid var(--linha); }
+  .topo-grade { display: flex; align-items: center; justify-content: space-between; gap: .75rem 1.5rem; padding-block: .55rem; }
+  .marca { display: inline-flex; align-items: center; gap: .7rem; min-width: 0; min-height: 44px; color: var(--tinta-2); text-decoration: none; }
+  .marca img { width: 132px; height: auto; flex: none; }
+  .menu { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 0 1.4rem; align-items: center; margin-left: auto; }
+  .menu a { color: var(--tinta); text-decoration: none; padding: .55rem 0; white-space: nowrap; font-weight: 500; font-size: .98rem; }
+  .menu a:hover { color: var(--azul); text-decoration: underline; }
+  .sacola-botao { position: relative; display: inline-flex; align-items: center; gap: .45rem; flex: none; min-height: 48px; padding: .45rem 1rem; border: 0; border-radius: 12px; background: var(--azul); color: #fff; font: 600 1rem/1 var(--fonte); cursor: pointer; transition: background-color var(--dur-ui) ease; }
+  .sacola-botao:hover { background: var(--azul-2); }
+  .sacola-botao svg { width: 22px; height: 22px; }
+  .sacola-botao .conta { display: inline-grid; place-items: center; min-width: 1.55rem; height: 1.55rem; padding: 0 .35rem; border-radius: 999px; background: #fff; color: var(--azul); font-size: .82rem; }
+  .menu-botao { display: none; }
+  @media (max-width: 60em) {
+    .menu-botao {
+      display: grid; align-content: center; justify-items: center; gap: 5px; flex: none; width: 52px; height: 52px; margin-right: -8px; padding: 0;
+      border: 0; border-radius: var(--raio); background: none; cursor: pointer;
+    }
+    .menu-botao span { display: block; width: 28px; height: 4px; border-radius: 4px; background: var(--azul); transition: transform .25s var(--ease-out), opacity .2s; }
+    .menu-aberto .menu-botao span:nth-child(1) { transform: translateY(9px) rotate(45deg); }
+    .menu-aberto .menu-botao span:nth-child(2) { opacity: 0; }
+    .menu-aberto .menu-botao span:nth-child(3) { transform: translateY(-9px) rotate(-45deg); }
+    .menu {
+      display: grid; position: absolute; top: 100%; left: 0; right: 0; margin: 0;
+      grid-template-columns: minmax(0, 1fr); gap: 0; padding: .5rem var(--margem) 1.25rem;
+      background: var(--branco); border-bottom: 1px solid var(--linha); box-shadow: 0 18px 30px -22px rgba(11, 43, 69, .5);
+      opacity: 0; visibility: hidden; transform: translateY(-6px);
+      transition: opacity var(--dur-ui) var(--ease-out), transform var(--dur-ui) var(--ease-out), visibility 0s linear var(--dur-ui);
+    }
+    .menu-aberto .menu { opacity: 1; visibility: visible; transform: none; transition-delay: 0s; }
+    .menu a { display: flex; align-items: center; min-height: 52px; padding: 0; border-bottom: 1px solid var(--linha); font-size: 1.05rem; }
+    .menu a:last-child { border-bottom: 0; }
+    .sacola-botao { margin-left: auto; }
+  }
+  @media (max-width: 480px) {
+    .sacola-botao .rotulo { display: none; }
+    .sacola-botao { padding: .45rem .8rem; }
+    .marca img { width: 112px; }
+  }
+  @media (prefers-reduced-motion: reduce) { .menu-botao span, .menu { transition: none !important; } }
+
+  /* ---------- abertura: carrossel de campanhas ---------- */
+  .destaques-secao { padding-block: clamp(.9rem, 2vw, 1.4rem) 0; }
+  .destaques { position: relative; container-type: inline-size; }
+  .destaques-trilho { display: grid; grid-auto-flow: column; grid-auto-columns: 100%; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; margin: 0; padding: 0; list-style: none; border-radius: 22px; }
+  .destaques-trilho::-webkit-scrollbar { display: none; }
+  .destaque { scroll-snap-align: start; position: relative; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr); align-items: center; min-height: clamp(360px, 44vw, 460px); background: var(--cor); overflow: hidden; }
+  .destaque-texto { position: relative; z-index: 1; display: grid; justify-items: start; align-content: center; gap: .9rem; padding: clamp(1.8rem, 4vw, 3rem) 1rem clamp(3.4rem, 5vw, 3.6rem) clamp(4.2rem, 7vw, 5.5rem); min-width: 0; }
+  .destaque-texto > * { max-width: 100%; }
+  .destaque-chapeu { color: var(--azul); font-weight: 650; font-size: .98rem; }
+  .destaque h2 { font-size: clamp(2rem, 1.2rem + 2.6vw, 3.4rem); line-height: .98; max-width: 10em; }
+  .destaque-texto > p:not(.destaque-chapeu) { max-width: 27rem; color: var(--tinta-2); font-size: 1.05rem; line-height: 1.5; }
+  .destaque-foto { align-self: stretch; display: grid; place-items: center; padding: 1rem clamp(3.6rem, 6vw, 5rem) 1rem 0; min-width: 0; }
+  /* fotos de produto tem fundo branco: multiply deixa o fundo da cor do banner */
+  .destaque-foto img { display: block; width: 100%; max-width: 560px; height: auto; mix-blend-mode: multiply; }
+  /* o ultimo banner e a propria loja: agua funda com a fachada de verdade */
+  .destaque-escuro { color: #fff; }
+  .destaque-escuro h2 { color: #fff; }
+  .destaque-escuro .destaque-chapeu { color: #9CC3F5; }
+  .destaque-escuro .destaque-texto > p:not(.destaque-chapeu) { color: #D3E1F0; }
+  .destaque-escuro .destaque-foto { padding: 0; }
+  .destaque-escuro .destaque-foto img { max-width: none; height: 100%; object-fit: cover; object-position: 50% 30%; mix-blend-mode: normal; -webkit-mask-image: linear-gradient(90deg, transparent, #000 22%); mask-image: linear-gradient(90deg, transparent, #000 22%); }
+  .destaques .seta { position: absolute; top: 50%; translate: 0 -50%; z-index: 2; box-shadow: 0 6px 18px -8px rgba(11, 43, 69, .5); }
+  .destaques .seta-ant { left: .9rem; }
+  .destaques .seta-prox { right: .9rem; }
+  .destaques .pontos { position: absolute; left: 50%; bottom: .35rem; translate: -50% 0; z-index: 2; }
+  .seta { width: 46px; height: 46px; border: 0; border-radius: 50%; background: var(--branco); color: var(--tinta); display: grid; place-items: center; cursor: pointer; transition: background-color var(--dur-ui) ease, transform .12s var(--ease-out); }
+  @media (hover: hover) and (pointer: fine) { .seta:hover { background: var(--nevoa); } }
+  .seta:active { transform: scale(.94); }
+  .seta svg { width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; }
+  .pontos { display: flex; gap: 0; }
+  .ponto { width: 36px; height: 40px; padding: 0; border: 0; background: none; cursor: pointer; display: grid; place-items: center; }
+  .ponto::before { content: ""; width: 10px; height: 10px; border-radius: 999px; background: rgba(18, 35, 58, .25); transition: width var(--dur-ui) var(--ease-out), background-color var(--dur-ui) ease; }
+  .ponto[aria-current="true"]::before { width: 26px; background: var(--azul); }
+  .no-escuro .ponto::before { background: rgba(255, 255, 255, .4); }
+  .no-escuro .ponto[aria-current="true"]::before { background: #fff; }
+  @media (max-width: 760px) {
+    .destaque { grid-template-columns: minmax(0, 1fr); align-items: start; min-height: 0; }
+    .destaque-foto { order: -1; aspect-ratio: 6 / 5; padding: 1rem 3.4rem .2rem; }
+    .destaque-foto { min-height: 0; overflow: hidden; }
+    .destaque-foto img { width: 100%; height: 100%; max-width: none; object-fit: contain; }
+    .destaque-escuro .destaque-foto img { width: 100%; height: 100%; max-height: none; -webkit-mask-image: linear-gradient(180deg, #000 70%, transparent); mask-image: linear-gradient(180deg, #000 70%, transparent); }
+    .destaque-texto { padding: .4rem var(--margem) 3.4rem; gap: .7rem; }
+    .destaque h2 { font-size: clamp(1.75rem, 1.3rem + 2.4vw, 2.4rem); }
+    .destaques .seta { top: calc(50cqw * 5 / 6); width: 42px; height: 42px; }
+    .destaques .seta-ant { left: .5rem; }
+    .destaques .seta-prox { right: .5rem; }
+  }
+
+  /* faixa de fatos logo abaixo do carrossel */
+  .fatos { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: .5rem 1.5rem; margin: 0; padding: 1.2rem 0 .4rem; list-style: none; }
+  .fato { display: grid; grid-template-columns: 34px minmax(0, 1fr); gap: .7rem; align-items: center; font-size: .93rem; line-height: 1.35; color: var(--tinta-2); }
+  .fato svg { width: 34px; height: 34px; fill: none; stroke: var(--azul); stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
+  .fato strong { display: block; color: var(--tinta); font-weight: 650; }
+  @media (max-width: 960px) { .fatos { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; } }
+  @media (max-width: 460px) { .fatos { grid-template-columns: minmax(0, 1fr); gap: .8rem; } }
+
+  /* ---------- linha d'agua: a passagem de uma faixa para a outra ---------- */
+  .agua-linha { display: block; width: 100%; height: clamp(34px, 5vw, 70px); }
+
+  /* ---------- secoes ---------- */
+  .secao { padding-block: clamp(3.5rem, 8vw, 6rem); }
+  .secao-nevoa { background: var(--nevoa); }
+  .secao-cabeca { display: grid; grid-template-columns: minmax(0, 1fr); gap: .8rem; max-width: 44rem; margin-bottom: clamp(1.75rem, 4vw, 2.75rem); }
+  .secao-cabeca p { color: var(--tinta-2); font-size: 1.08rem; }
+
+  /* categorias: bolhas com foto */
+  .categorias { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 1rem; margin-bottom: clamp(2.5rem, 5vw, 3.5rem); }
+  .categoria { display: grid; justify-items: center; align-content: start; gap: .7rem; padding: 0; border: 0; background: none; color: var(--tinta); font: 600 1rem/1.2 var(--fonte); text-align: center; cursor: pointer; }
+  .categoria span:first-child { display: block; width: min(100%, 136px); aspect-ratio: 1; border-radius: 50%; overflow: hidden; background: var(--branco); box-shadow: 0 0 0 0 var(--azul); transition: box-shadow var(--dur-ui) var(--ease-out); }
+  .categoria img { display: block; width: 100%; height: 100%; object-fit: contain; padding: 14%; transition: transform .5s var(--ease-out); }
+  .categoria-todos span:first-child { display: grid; place-items: center; background: var(--azul-claro); }
+  .categoria-todos svg { width: 46%; height: 46%; fill: none; stroke: var(--azul); stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+  .categoria[aria-pressed="true"] span:first-child { box-shadow: 0 0 0 4px var(--azul); }
+  @media (hover: hover) and (pointer: fine) { .categoria:hover img { transform: scale(1.05); } }
+  @media (max-width: 860px) {
+    .categorias { display: flex; gap: .9rem; overflow-x: auto; scroll-snap-type: x mandatory; margin-inline: calc(var(--margem) * -1); padding: 4px var(--margem) .5rem; scrollbar-width: none; }
+    .categorias::-webkit-scrollbar { display: none; }
+    .categoria { flex: 0 0 100px; scroll-snap-align: start; font-size: .95rem; }
+  }
+
+  /* vitrine: prateleiras que rolam de lado */
+  .vitrine { display: grid; gap: clamp(2.4rem, 4vw, 3.4rem); padding: 0; margin: 0; list-style: none; }
+  .prateleira { min-width: 0; }
+  .prateleira.some { display: none; }
+  .prateleira-topo { display: flex; align-items: center; gap: .5rem 1rem; margin-bottom: 1rem; }
+  .prateleira-topo h3 { margin-right: auto; font-size: clamp(1.35rem, 1.15rem + .7vw, 1.75rem); }
+  .ver-tudo { min-height: 44px; padding: 0; border: 0; background: none; color: var(--azul); font: 600 1rem/1.2 var(--fonte); text-decoration: underline; text-underline-offset: .18em; cursor: pointer; }
+  .prateleira-setas { display: flex; gap: .4rem; }
+  .prateleira-setas .seta { box-shadow: inset 0 0 0 1px var(--linha); }
+  .prateleira-setas .seta:disabled { opacity: .35; cursor: default; }
+  .fileira { --col: 5; --vao: 1.1rem; position: relative; display: grid; grid-auto-flow: column; grid-auto-columns: calc((100% - (var(--col) - 1) * var(--vao)) / var(--col)); gap: var(--vao); overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; padding: 0; margin: 0; list-style: none; }
+  .fileira::-webkit-scrollbar { display: none; }
+  .fileira > li { scroll-snap-align: start; }
+  .filtrada .prateleira-topo { display: none; }
+  .filtrada .fileira { grid-auto-flow: row; grid-template-columns: repeat(var(--col), minmax(0, 1fr)); grid-auto-rows: 1fr; row-gap: clamp(1.4rem, 3vw, 2rem); overflow: visible; }
+  @media (max-width: 1100px) { .fileira { --col: 4; } }
+  @media (max-width: 860px) { .fileira { --col: 3; } }
+  @media (max-width: 560px) {
+    .fileira { --col: 2; --vao: .75rem; grid-auto-columns: 46%; margin-inline: calc(var(--margem) * -1); padding-inline: var(--margem); scroll-padding-inline: var(--margem); }
+    .filtrada .fileira { margin-inline: 0; padding-inline: 0; }
+    .prateleira-setas { display: none; }
+  }
+  /* cartao: branco sobre a nevoa, todos do mesmo tamanho */
+  .produto { display: grid; grid-template-rows: auto 1fr; overflow: hidden; min-width: 0; border-radius: var(--raio); background: var(--branco); box-shadow: 0 0 0 1px var(--linha); }
+  .produto-foto { position: relative; display: block; aspect-ratio: 1; background: var(--branco); border-bottom: 1px solid var(--linha); }
+  .produto-foto img { display: block; width: 100%; height: 100%; object-fit: contain; transition: transform .6s var(--ease-out); }
+  @media (hover: hover) and (pointer: fine) { .produto:hover .produto-foto img { transform: scale(1.04); } }
+  .selo { position: absolute; left: .7rem; top: .7rem; padding: .25rem .65rem; border-radius: 999px; background: var(--boia); color: #fff; font-size: .8rem; font-weight: 650; }
+  .produto-info { display: flex; flex-direction: column; gap: .35rem; min-width: 0; padding: .85rem .9rem .95rem; }
+  .produto-marca { color: var(--azul); font-size: .86rem; font-weight: 650; }
+  .produto h4 { margin: 0; font-size: 1rem; font-weight: 600; line-height: 1.3; }
+  .produto h4, .produto-desc { display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; overflow: hidden; min-height: 2lh; }
+  .produto-desc { color: var(--tinta-2); font-size: .9rem; line-height: 1.45; }
+  .produto h4 a { color: inherit; text-decoration: none; }
+  @media (hover: hover) and (pointer: fine) { .produto h4 a:hover { text-decoration: underline; text-underline-offset: 3px; } }
+  .produto-preco { font-weight: 700; font-size: 1.15rem; }
+  .produto-preco small { font-size: .8rem; font-weight: 500; color: var(--tinta-2); }
+  .produto .btn { width: 100%; min-height: 46px; padding-inline: .8rem; margin-top: auto; }
+  .btn.adicionado { background: var(--agua); color: #fff; }
+  .procura { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: .4rem 1.5rem; margin-top: clamp(3rem, 2rem + 3vw, 4.5rem); padding: 1.4rem 1.6rem; border-radius: var(--raio); background: var(--branco); box-shadow: 0 0 0 1px var(--linha); }
+  .procura h3 { font-size: 1.4rem; }
+  .procura p { color: var(--tinta-2); }
+  .procura .btn { grid-column: 2; grid-row: 1 / span 2; }
+  @media (max-width: 640px) { .procura { grid-template-columns: minmax(0, 1fr); } .procura .btn { grid-column: auto; grid-row: auto; justify-self: start; margin-top: .4rem; } }
+  @media (max-width: 560px) { .produto-desc { display: none; } .produto-info { padding: .7rem .7rem .8rem; } .produto h4 { font-size: .95rem; } }
+
+  /* ---------- monte seu equipamento: a faixa de agua funda com a boia ---------- */
+  .equipamento { position: relative; background: var(--agua); color: #fff; padding-block: clamp(2.5rem, 6vw, 4.5rem) clamp(3.5rem, 8vw, 6rem); }
+  .equipamento-topo { position: relative; background: var(--nevoa); }
+  .equipamento-topo .agua-linha { position: relative; z-index: 0; }
+  /* a boia fica na linha d'agua, do lado direito */
+  .boia { position: absolute; right: clamp(8%, 12vw, 18%); bottom: clamp(4px, 1vw, 14px); z-index: 1; width: clamp(34px, 4vw, 48px); height: auto; transform-origin: 50% 80%; }
+  @media (prefers-reduced-motion: no-preference) { .boia { animation: boiar 3.6s ease-in-out infinite; } }
+  @keyframes boiar { 0%, 100% { transform: translateY(0) rotate(-3deg); } 50% { transform: translateY(5px) rotate(3deg); } }
+  .equipamento-grade { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr); gap: clamp(2rem, 5vw, 4rem); align-items: start; }
+  .equipamento h2 { color: #fff; font-size: clamp(2.1rem, 1.4rem + 2.6vw, 3.4rem); }
+  .equipamento-texto { display: grid; grid-template-columns: minmax(0, 1fr); gap: 1.6rem; }
+  .equipamento-texto > p { color: #C9D9EA; font-size: 1.1rem; max-width: 34rem; }
+  .passo { display: grid; grid-template-columns: minmax(0, 1fr); gap: .8rem; margin: 0; padding: 0; border: 0; min-width: 0; }
+  .passo legend { display: flex; max-width: 100%; align-items: baseline; gap: .7rem; padding: 0; margin-bottom: .8rem; font-weight: 600; font-size: 1.08rem; }
+  .passo legend b { font-family: var(--fonte-titulo); font-size: 1.6rem; font-weight: 800; line-height: 1; color: #7FB0F0; }
+  .peixes { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 9.5rem), 1fr)); gap: .55rem; }
+  .peixe, .tem { position: relative; display: grid; gap: .1rem; padding: .8rem .95rem; border-radius: 12px; background: var(--agua-2); box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .14); cursor: pointer; transition: background-color var(--dur-ui) ease, box-shadow var(--dur-ui) ease; }
+  .peixe input, .tem input { position: absolute; inset: 0; margin: 0; opacity: 0; cursor: pointer; }
+  .peixe strong, .tem strong { font-weight: 650; }
+  .peixe small, .tem small { color: #AFC4DA; font-size: .86rem; line-height: 1.35; }
+  @media (hover: hover) and (pointer: fine) { .peixe:hover, .tem:hover { box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .4); } }
+  .peixe:has(input:checked), .tem:has(input:checked) { background: #fff; color: var(--tinta); box-shadow: none; }
+  .peixe:has(input:checked) small, .tem:has(input:checked) small { color: var(--tinta-2); }
+  .peixe:has(input:focus-visible), .tem:has(input:focus-visible) { outline: 3px solid #9CC3F5; outline-offset: 2px; }
+  .tens { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .55rem; }
+  @media (max-width: 460px) { .tens { grid-template-columns: minmax(0, 1fr); } }
+  /* a lista montada: cartao branco */
+  .lista { display: grid; grid-template-columns: minmax(0, 1fr); gap: 1rem; padding: clamp(1.2rem, 3vw, 1.8rem); border-radius: 20px; background: var(--branco); color: var(--tinta); }
+  .lista h3 { font-size: clamp(1.4rem, 1.2rem + .7vw, 1.8rem); }
+  .lista-grupo { display: grid; gap: .1rem; }
+  .lista-grupo > p { margin-bottom: .35rem; color: var(--tinta-2); font-size: .9rem; font-weight: 600; }
+  .lista ul { display: grid; gap: 0; margin: 0; padding: 0; list-style: none; }
+  .lista li { display: grid; grid-template-columns: 56px minmax(0, 1fr) auto; gap: .2rem .85rem; align-items: center; padding: .55rem 0; border-top: 1px solid var(--linha); }
+  .lista li:first-child { border-top: 0; }
+  .lista li img { grid-row: span 2; width: 56px; aspect-ratio: 1; object-fit: contain; border-radius: 10px; box-shadow: inset 0 0 0 1px var(--linha); }
+  .lista li a { color: var(--tinta); font-weight: 600; line-height: 1.3; text-decoration: none; }
+  @media (hover: hover) and (pointer: fine) { .lista li a:hover { text-decoration: underline; } }
+  .lista li small { grid-column: 2; color: var(--tinta-2); font-size: .88rem; }
+  .lista li strong { grid-column: 3; grid-row: 1 / span 2; white-space: nowrap; }
+  .lista-total { display: flex; justify-content: space-between; align-items: baseline; padding-top: .9rem; border-top: 1.5px solid var(--tinta); font-size: 1.05rem; }
+  .lista-total strong { font-family: var(--fonte-titulo); font-size: 1.7rem; font-weight: 800; }
+  .lista-botoes { display: grid; gap: .55rem; }
+  .lista-botoes .btn { width: 100%; }
+  .lista-status { font-size: .95rem; }
+  .lista-status:empty { display: none; }
+  .lista-nota { color: var(--tinta-2); font-size: .88rem; }
+  @media (max-width: 900px) { .equipamento-grade { grid-template-columns: minmax(0, 1fr); } }
+  @media (max-width: 420px) { .lista li { grid-template-columns: 48px minmax(0, 1fr); } .lista li img { width: 48px; } .lista li strong { grid-column: 2; grid-row: auto; } }
+
+  /* ---------- a loja ---------- */
+  .loja-grade { display: grid; grid-template-columns: minmax(0, .95fr) minmax(0, 1.05fr); gap: clamp(2rem, 4vw, 3.5rem); align-items: center; }
+  .loja-fotos { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(.75rem, 1.6vw, 1.2rem); }
+  .loja-fotos img { display: block; width: 100%; aspect-ratio: 3 / 4; object-fit: cover; border-radius: var(--raio); }
+  .loja-fotos figure:last-child { margin-top: clamp(1.5rem, 4vw, 3rem); }
+  .loja-texto { display: grid; grid-template-columns: minmax(0, 1fr); gap: .9rem; }
+  .loja-texto > p:not(.nota-google) { font-size: 1.1rem; color: var(--tinta-2); max-width: 36rem; }
+  .nota-google { display: flex; flex-wrap: wrap; align-items: baseline; gap: .3rem .7rem; margin-top: .3rem; }
+  .nota-google strong { font-family: var(--fonte-titulo); font-size: 2.4rem; font-weight: 800; line-height: 1; color: var(--azul); }
+  .avaliacoes { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .75rem; }
+  .avaliacao { display: flex; flex-direction: column; padding: .95rem 1rem; border-radius: var(--raio); background: var(--nevoa); }
+  .avaliacao p { font-size: .95rem; line-height: 1.4; font-weight: 500; }
+  .avaliacao footer { margin-top: auto; padding-top: .5rem; color: var(--tinta-2); font-size: .82rem; }
+  @media (max-width: 1080px) { .avaliacoes { grid-template-columns: minmax(0, 1fr); } }
+  @media (max-width: 860px) { .loja-grade { grid-template-columns: minmax(0, 1fr); } .loja-fotos { max-width: 560px; } }
+
+  /* ---------- como chegar ---------- */
+  .chegar { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr); overflow: hidden; border-radius: 20px; background: var(--branco); box-shadow: 0 0 0 1px var(--linha); }
+  .chegar-mapa { display: block; width: 100%; height: 100%; min-height: 280px; border: 0; background: var(--nevoa-2); }
+  .chegar-dados { display: grid; grid-template-columns: minmax(0, 1fr); gap: 1.1rem; align-content: center; padding: clamp(1.4rem, 3vw, 2.2rem); }
+  .chegar-dados h3 { font: 600 .95rem/1.3 var(--fonte); color: var(--tinta-2); margin-bottom: .1rem; }
+  .chegar-dados p, .chegar-dados a { font-family: var(--fonte-titulo); font-size: clamp(1.15rem, 1rem + .5vw, 1.4rem); font-weight: 700; line-height: 1.3; }
+  .chegar-dados a:not(.btn) { display: inline-block; max-width: 100%; padding-block: .4rem; text-decoration: none; overflow-wrap: anywhere; }
+  @media (hover: hover) and (pointer: fine) { .chegar-dados a:hover { text-decoration: underline; text-underline-offset: 4px; } }
+  .chegar-dados .btn { justify-self: start; font-family: var(--fonte); font-size: 1rem; font-weight: 600; }
+  @media (max-width: 760px) { .chegar { grid-template-columns: minmax(0, 1fr); } .chegar-mapa { height: 260px; } }
+
+  /* ---------- rodape ---------- */
+  .rodape-onda { display: block; background: var(--nevoa); }
+  .rodape { background: var(--agua); color: #C9D9EA; padding: 1.1rem 0 calc(1.1rem + env(safe-area-inset-bottom)); font-size: .92rem; }
+  .rodape-grade { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 1rem 2.5rem; }
+  .rodape-grade > * { min-width: 0; max-width: 100%; }
+  .rodape-marca { display: inline-flex; align-items: center; gap: .8rem; color: #fff; text-decoration: none; }
+  .rodape-marca img { width: 104px; padding: .35rem .6rem; border-radius: 10px; background: #fff; }
+  .rodape a { color: #fff; }
+  .redes { display: flex; gap: .4rem; }
+  .redes a { display: grid; place-items: center; width: 44px; height: 44px; border-radius: 50%; background: rgba(255, 255, 255, .08); transition: background-color var(--dur-ui) ease; }
+  .redes svg { width: 22px; height: 22px; }
+  @media (hover: hover) and (pointer: fine) { .redes a:hover { background: var(--azul); } }
+  @media (max-width: 700px) { .rodape-grade { flex-direction: column; align-items: flex-start; gap: .6rem; } }
+
+  /* ---------- pagina do produto: abre por cima da vitrine e tem endereco proprio (#produto-id) ---------- */
+  .ficha {
+    position: fixed; width: min(100% - 2rem, 980px); max-width: none; max-height: min(92dvh, 740px); margin: auto; padding: 0; border: 0;
+    border-radius: 22px; background: var(--branco); color: var(--tinta); overflow: auto; overscroll-behavior: contain;
+    opacity: 0; transform: translateY(14px) scale(.98); transition: opacity .28s var(--ease-out), transform .28s var(--ease-out);
+  }
+  .ficha[open] { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr); }
+  .ficha.aberta { opacity: 1; transform: none; }
+  .ficha::backdrop { background: rgba(11, 43, 69, .55); opacity: 0; transition: opacity .28s ease; }
+  .ficha.aberta::backdrop { opacity: 1; }
+  .ficha > .fechar { position: absolute; top: .8rem; right: .8rem; z-index: 2; }
+  .ficha-foto { position: relative; align-self: start; aspect-ratio: 1; border-right: 1px solid var(--linha); }
+  .ficha-foto img { display: block; width: 100%; height: 100%; object-fit: contain; }
+  .ficha-info { display: flex; flex-direction: column; gap: .85rem; min-width: 0; padding: clamp(1.4rem, 3vw, 2.4rem); }
+  .ficha-info h2 { padding-right: 2.6rem; font-size: clamp(1.45rem, 1.2rem + .9vw, 1.9rem); line-height: 1.12; }
+  .ficha-preco { font-size: 1.6rem; font-weight: 700; }
+  .ficha-desc { color: var(--tinta-2); }
+  .variacao { min-width: 0; margin: .2rem 0 0; padding: 0; border: 0; }
+  .variacao legend { padding: 0; margin-bottom: .45rem; color: var(--tinta-2); font-size: .95rem; }
+  .variacao legend strong { color: var(--tinta); font-weight: 600; }
+  .opcoes { display: flex; flex-wrap: wrap; gap: .45rem; }
+  .opcao { position: relative; display: flex; }
+  .opcao input { position: absolute; inset: 0; margin: 0; opacity: 0; cursor: pointer; }
+  .opcao span { display: inline-flex; align-items: center; min-height: 44px; padding: .45rem .95rem; border-radius: 10px; box-shadow: inset 0 0 0 1.5px var(--linha); font-size: .95rem; cursor: pointer; transition: background-color var(--dur-ui) ease, color var(--dur-ui) ease, box-shadow var(--dur-ui) ease; }
+  @media (hover: hover) and (pointer: fine) { .opcao:hover span { box-shadow: inset 0 0 0 1.5px var(--linha-forte); } }
+  .opcao input:checked + span { background: var(--agua); color: #fff; box-shadow: none; }
+  .opcao input:focus-visible + span { outline: 3px solid var(--azul); outline-offset: 3px; }
+  .ficha-add { width: 100%; min-height: 52px; margin-top: .3rem; }
+  .ficha-status { min-height: 1.5em; margin-top: -.3rem; font-size: .95rem; }
+  .ficha-status:empty { display: none; }
+  .ver-sacola { padding: 0; border: 0; background: none; color: var(--azul); font: 600 .95rem/1.5 var(--fonte); text-decoration: underline; text-underline-offset: 3px; cursor: pointer; }
+  .ficha-entrega { display: grid; gap: .35rem; margin: .3rem 0 0; padding: 1rem 0 0; border-top: 1px solid var(--linha); color: var(--tinta-2); font-size: .92rem; list-style: none; }
+  .ficha-entrega li { display: flex; gap: .55rem; }
+  .ficha-entrega li::before { content: ""; flex: none; width: 6px; height: 6px; margin-top: .55em; border-radius: 50%; background: var(--azul); }
+  @media (max-width: 760px) {
+    .ficha { width: 100%; max-height: 94dvh; margin: auto 0 0; border-radius: 22px 22px 0 0; transform: translateY(40px); }
+    .ficha[open] { grid-template-columns: minmax(0, 1fr); }
+    .ficha-foto { aspect-ratio: 4 / 3; border-right: 0; border-bottom: 1px solid var(--linha); }
+  }
+  @media (prefers-reduced-motion: reduce) { .ficha { transform: none; transition: opacity .2s ease; } }
+  html:has(dialog[open]) { overflow: hidden; }
+
+  /* ---------- carrinho: gaveta que entra pela direita ---------- */
+  .sacola {
+    position: fixed; inset: 0 0 0 auto; margin: 0; padding: 0; border: 0;
+    width: min(100%, 460px); max-width: 100%; height: 100dvh; max-height: 100dvh;
+    border-radius: 22px 0 0 22px; background: var(--branco); color: var(--tinta);
+    transform: translateX(100%); transition: transform .34s var(--ease-gaveta);
+  }
+  .sacola[open] { display: flex; flex-direction: column; }
+  .sacola.aberta { transform: none; }
+  .sacola::backdrop { background: rgba(11, 43, 69, .55); opacity: 0; transition: opacity .34s ease; }
+  .sacola.aberta::backdrop { opacity: 1; }
+  @media (prefers-reduced-motion: reduce) { .sacola { transform: none; opacity: 0; transition: opacity .2s ease; } .sacola.aberta { opacity: 1; } }
+  .sacola-topo { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: 1rem 1.3rem; border-bottom: 1px solid var(--linha); }
+  .sacola-topo h2 { font-size: 1.6rem; }
+  .fechar { display: grid; place-items: center; width: 46px; height: 46px; flex: none; border: 0; border-radius: 50%; background: var(--nevoa); color: var(--tinta); cursor: pointer; }
+  .fechar svg { width: 22px; height: 22px; }
+  .sacola-corpo { flex: 1; overflow: auto; overscroll-behavior: contain; display: grid; align-content: start; gap: 1.4rem; padding: 1.2rem 1.3rem; }
+  .itens { display: grid; gap: 1rem; padding: 0; margin: 0; list-style: none; }
+  .item { display: grid; grid-template-columns: 68px minmax(0, 1fr); gap: .35rem .9rem; }
+  .item img { grid-row: span 4; width: 68px; aspect-ratio: 1; object-fit: contain; border-radius: 10px; background: #fff; box-shadow: inset 0 0 0 1px var(--linha); }
+  .item h3 { font: 600 1rem/1.3 var(--fonte); }
+  .item-linha { display: grid; grid-template-columns: auto minmax(0, 1fr); align-items: center; gap: 0 .6rem; }
+  .item-linha .remover { grid-column: 1 / -1; justify-self: start; }
+  .qtd { display: inline-flex; align-items: center; border-radius: 10px; box-shadow: inset 0 0 0 1px var(--linha-forte); }
+  .qtd button { width: 44px; height: 44px; border: 0; border-radius: 10px; background: none; color: var(--tinta); font-size: 1.2rem; cursor: pointer; }
+  .qtd output { min-width: 1.6rem; text-align: center; font-weight: 600; }
+  .remover { min-height: 44px; padding: 0 .2rem; border: 0; background: none; color: var(--tinta-2); font: 400 .95rem/1 var(--fonte); text-decoration: underline; cursor: pointer; }
+  .item-var { color: var(--tinta-2); font-size: .9rem; }
+  .item-preco { justify-self: end; font-size: 1rem; white-space: nowrap; }
+  .vazia { display: grid; justify-items: center; gap: 1rem; padding: 2.5rem 0; color: var(--tinta-2); text-align: center; }
+  .vazia svg { width: 70px; height: auto; }
+  .bloco { display: grid; gap: .7rem; min-width: 0; margin: 0; padding: 1.2rem 0 0; border: 0; border-top: 1px solid var(--linha); }
+  .bloco legend { float: left; width: 100%; margin-bottom: .7rem; padding: 0; font: 700 1.2rem/1.2 var(--fonte-titulo); }
+  .escolhas { display: grid; gap: .5rem; }
+  .escolha { position: relative; display: grid; gap: .1rem; padding: .8rem 1rem .85rem 2.9rem; border-radius: 12px; box-shadow: inset 0 0 0 1px var(--linha-forte); cursor: pointer; transition: box-shadow var(--dur-ui) ease, background-color var(--dur-ui) ease; }
+  .escolha input { position: absolute; left: 1rem; top: 1.05rem; width: 1.15rem; height: 1.15rem; margin: 0; accent-color: var(--azul); }
+  .escolha strong { font-weight: 600; }
+  .escolha small { color: var(--tinta-2); font-size: .9rem; }
+  .escolha:has(input:checked) { background: var(--nevoa); box-shadow: inset 0 0 0 2px var(--azul); }
+  .pilulas { display: flex; flex-wrap: wrap; gap: .45rem; }
+  .pilula { position: relative; display: inline-flex; align-items: center; min-height: 44px; padding: .45rem 1rem; border-radius: 10px; box-shadow: inset 0 0 0 1px var(--linha-forte); cursor: pointer; transition: background-color var(--dur-ui) ease, color var(--dur-ui) ease; }
+  .pilula input { position: absolute; inset: 0; opacity: 0; margin: 0; cursor: pointer; }
+  .pilula:has(input:checked) { background: var(--agua); color: #fff; box-shadow: none; }
+  .pilula:has(input:focus-visible), .escolha:has(input:focus-visible) { outline: 3px solid var(--azul); outline-offset: 2px; }
+  .pilula:has(input:disabled) { opacity: .4; cursor: not-allowed; }
+  .pilula:has(input:disabled) input { cursor: not-allowed; }
+  .campos { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .8rem; }
+  .campo { display: grid; grid-template-columns: minmax(0, 1fr); gap: .3rem; min-width: 0; font-weight: 600; font-size: .95rem; }
+  .campo-largo { grid-column: 1 / -1; }
+  .campo small { font-weight: 400; color: var(--tinta-2); }
+  .campo input, .campo select {
+    width: 100%; min-width: 0; min-height: 48px; padding: .6rem .85rem; border: 0; border-radius: 10px;
+    background: var(--branco); box-shadow: inset 0 0 0 1.5px var(--linha-forte); color: var(--tinta); font: 400 1rem/1.3 var(--fonte);
+    transition: box-shadow var(--dur-ui) ease;
+  }
+  .campo input:focus, .campo select:focus { outline: none; box-shadow: inset 0 0 0 2px var(--azul); }
+  .aviso { color: var(--tinta-2); font-size: .92rem; }
+  .nota { color: var(--tinta-2); font-size: .9rem; }
+  .previa-caixa summary { min-height: 44px; display: flex; align-items: center; cursor: pointer; font-weight: 600; color: var(--azul); }
+  .previa { padding: .9rem 1rem 1.05rem; border-radius: 12px 12px 12px 3px; background: #D9FDD3; color: #12241B; font-size: .95rem; line-height: 1.5; white-space: pre-line; overflow-wrap: anywhere; }
+  .sacola-pe { display: grid; gap: .55rem; padding: 1rem 1.3rem max(1.2rem, env(safe-area-inset-bottom)); border-top: 1px solid var(--linha); }
+  .sacola-pe .btn { width: 100%; }
+  .subtotal { display: flex; justify-content: space-between; align-items: baseline; font-size: 1.05rem; }
+  .subtotal strong { font-size: 1.3rem; }
+  .sacola-pe p { color: var(--tinta-2); font-size: .88rem; text-align: center; }
+  .sacola-pe .erro { color: #B3261E; font-weight: 600; }
+  /* pagamento simulado: Pix com QR Code, cartao e pedido aprovado */
+  .campo-cartao { position: relative; }
+  .campo-cartao input { padding-right: 6.5rem; }
+  .bandeira { position: absolute; right: .7rem; bottom: 13px; padding: .15rem .5rem; border-radius: 6px; background: var(--nevoa); font-size: .78rem; font-weight: 700; pointer-events: none; }
+  .bandeira:empty { visibility: hidden; }
+  .demo { justify-self: center; padding: .25rem .75rem; border-radius: 999px; background: var(--nevoa); box-shadow: inset 0 0 0 1px var(--linha-forte); color: var(--tinta-2); font-size: .8rem; font-weight: 600; }
+  .pagar, .aprovado { display: grid; justify-items: center; gap: .8rem; padding: .4rem 0 1rem; text-align: center; }
+  .pagar h3, .aprovado h3 { font-size: 1.6rem; }
+  .pagar > p { max-width: 30ch; color: var(--tinta-2); }
+  .pagar .valor { color: var(--tinta); font-size: 1.5rem; font-weight: 700; }
+  .qr { width: 200px; padding: 12px; border-radius: 16px; background: #fff; box-shadow: inset 0 0 0 1.5px var(--linha-forte); }
+  .qr svg { display: block; width: 100%; height: auto; }
+  .copia { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: .5rem; width: 100%; }
+  .copia input { min-width: 0; min-height: 48px; padding: .6rem .85rem; border: 0; border-radius: 10px; background: var(--nevoa); box-shadow: inset 0 0 0 1.5px var(--linha-forte); color: var(--tinta-2); font: 400 .9rem/1.3 var(--fonte); text-overflow: ellipsis; }
+  .copia .btn { min-height: 48px; padding-inline: 1.1rem; }
+  .status { display: inline-flex; align-items: center; gap: .55rem; font-weight: 600; }
+  .pulso { width: 10px; height: 10px; border-radius: 50%; background: var(--azul); animation: pulso 1.2s ease-in-out infinite; }
+  .status.pago { color: #12803B; }
+  .status.pago .pulso { background: #179A48; animation: none; }
+  @keyframes pulso { 50% { opacity: .3; transform: scale(.7); } }
+  .girando::before { content: ""; width: 1.1em; height: 1.1em; border: 2.5px solid currentColor; border-right-color: transparent; border-radius: 50%; animation: gira .7s linear infinite; }
+  @keyframes gira { to { transform: rotate(1turn); } }
+  .btn.girando { gap: .6rem; cursor: progress; }
+  .aprovado svg { width: 84px; height: 84px; }
+  .aprovado circle { fill: #E3F6E8; }
+  .aprovado path { fill: none; stroke: #179A48; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; stroke-dasharray: 40; stroke-dashoffset: 40; animation: risca .45s .15s var(--ease-out) forwards; }
+  @keyframes risca { to { stroke-dashoffset: 0; } }
+  .aprovado p { max-width: 32ch; color: var(--tinta-2); }
+  .aprovado .numero { color: var(--tinta); font-weight: 700; }
+  @media (prefers-reduced-motion: reduce) { .pulso, .girando::before { animation: none; } .aprovado path { animation: none; stroke-dashoffset: 0; } }
+  @media (max-width: 520px) { .sacola { border-radius: 0; } .campos { grid-template-columns: minmax(0, 1fr); } .campos.cartao-campos { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+
+  /* ---------- botao flutuante ---------- */
+  .flutuante {
+    display: grid; place-items: center; position: fixed; z-index: 25;
+    right: max(clamp(16px, 2vw, 28px), env(safe-area-inset-right)); bottom: calc(clamp(16px, 2vw, 28px) + env(safe-area-inset-bottom));
+    width: 62px; height: 62px; border-radius: 50%; background: #179A48; color: #fff;
+    box-shadow: 0 10px 28px -10px rgba(23, 154, 72, .7), 0 2px 6px rgba(11, 43, 69, .2);
+    opacity: 0; transform: translateY(12px); pointer-events: none; transition: opacity .25s var(--ease-out), transform .25s var(--ease-out), background-color .2s;
+  }
+  .flutuante.visivel { opacity: 1; transform: none; pointer-events: auto; }
+  .flutuante:hover { background: #12803B; }
+  .flutuante svg { width: 30px; height: 30px; }
+  @media (max-width: 600px) { .flutuante { width: 56px; height: 56px; } .flutuante svg { width: 27px; height: 27px; } }
+  @media (prefers-reduced-motion: reduce) { .flutuante { transition: none; transform: none; } }
+</style>
+<script>document.documentElement.classList.add("com-js");</script>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-sacola" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round" d="M3 4h2.2l2.3 11h10.2l2-8H6.3M9.5 19.5a1 1 0 1 0 0 .01M16.5 19.5a1 1 0 1 0 0 .01"/></symbol>
+  <symbol id="i-facebook" viewBox="0 0 24 24"><path fill="currentColor" d="M13.5 21v-7.5H16l.4-3h-2.9V8.6c0-.9.3-1.5 1.5-1.5h1.5V4.4c-.3 0-1.2-.1-2.2-.1-2.2 0-3.8 1.4-3.8 3.9v2.3H8v3h2.5V21h3Z"/></symbol>
+  <symbol id="i-instagram" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/></g><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor"/></symbol>
+  <symbol id="i-x" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M6 6l12 12M18 6 6 18"/></symbol>
+  <symbol id="i-zap" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3Z"/></symbol>
+  <!-- a boia: antena, topo vermelho do P do logo, base branca e o peso embaixo -->
+  <symbol id="i-boia" viewBox="0 0 40 96"><path d="M20 2v26" stroke="#12233A" stroke-width="2.4" stroke-linecap="round"/><path d="M20 26c-8 0-13 8-13 20h26c0-12-5-20-13-20Z" fill="#D42A2F"/><path d="M7 46c0 11 5 22 13 22s13-11 13-22Z" fill="#F2F6FA"/><path d="M20 68v24" stroke="#F2F6FA" stroke-width="2.4" stroke-linecap="round"/><path d="M12 36c1.5-4 4.4-6.4 8-6.8" stroke="#fff" stroke-opacity=".45" stroke-width="2.4" fill="none" stroke-linecap="round"/></symbol>
+</svg>
+<a class="pular" href="#conteudo">Pular para o conteúdo</a>
+
+<header class="topo">
+  <div class="envoltorio topo-grade">
+    <a class="marca" href="#" translate="no" aria-label="Pescão, início">
+      <img src="img/logo.png" width="750" height="314" alt="">
+    </a>
+    <nav class="menu" id="menu" aria-label="Principal">
+      <a href="#produtos">Produtos</a>
+      <a href="#equipamento">Monte seu equipamento</a>
+      <a href="#loja">A loja</a>
+      <a href="#chegar">Como chegar</a>
+    </nav>
+    <button class="sacola-botao" type="button" id="abrir-sacola" aria-haspopup="dialog">
+      <svg aria-hidden="true"><use href="#i-sacola"/></svg><span class="rotulo">Carrinho</span>
+      <span class="conta" id="sacola-conta">0</span><span class="so-leitor" id="sacola-sr">0 itens no carrinho</span>
+    </button>
+    <button class="menu-botao" type="button" id="menu-botao" aria-expanded="false" aria-controls="menu" aria-label="Abrir menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<section class="destaques-secao" aria-labelledby="titulo">
+  <div class="envoltorio">
+    <h1 class="so-leitor" id="titulo">Pescão: artigos para pesca em Cravinhos</h1>
+    <div class="destaques" id="destaques-caixa" aria-roledescription="carrossel" aria-label="Destaques da loja">
+      <ul class="destaques-trilho" id="destaques">
+        <li class="destaque" style="--cor:#E3EDF9" aria-roledescription="destaque" aria-label="1 de 4">
+          <div class="destaque-texto">
+            <p class="destaque-chapeu">Maruri</p>
+            <h2>Kit vara e carretilha Crobat</h2>
+            <p>Vara e carretilha combinadas, em quatro cores, prontas para a próxima pescaria.</p>
+            <button class="btn" type="button" data-produto="kit-crobat">Ver o kit</button>
+          </div>
+          <div class="destaque-foto"><img src="img/banner-kit.webp" width="1200" height="1000" alt="Kit de pesca Crobat da Maruri, com vara, carretilha e linha"></div>
+        </li>
+        <li class="destaque" style="--cor:#DDEFEC" aria-roledescription="destaque" aria-label="2 de 4">
+          <div class="destaque-texto">
+            <p class="destaque-chapeu">Albatroz Fishing e Maruri</p>
+            <h2>Carretilhas de perfil baixo</h2>
+            <p>Escolha a cor e o lado da manivela na página de cada modelo.</p>
+            <button class="btn" type="button" data-ir="carretilhas">Ver as carretilhas</button>
+          </div>
+          <div class="destaque-foto"><img src="img/banner-carretilhas.webp" width="1200" height="1000" alt="Carretilhas M21 Pro e New Crobat" loading="lazy"></div>
+        </li>
+        <li class="destaque" style="--cor:#FBF0DA" aria-roledescription="destaque" aria-label="3 de 4">
+          <div class="destaque-texto">
+            <p class="destaque-chapeu">Marine Sports e Maruri</p>
+            <h2>Iscas artificiais para tucunaré e traíra</h2>
+            <p>Meia-água e superfície, em dezenas de cores.</p>
+            <button class="btn" type="button" data-ir="iscas">Ver as iscas</button>
+          </div>
+          <div class="destaque-foto"><img src="img/banner-iscas.webp" width="1200" height="1000" alt="Iscas artificiais Pimentinha, Magic Dancer e Savage" loading="lazy"></div>
+        </li>
+        <li class="destaque destaque-escuro" style="--cor:#0B2B45" aria-roledescription="destaque" aria-label="4 de 4">
+          <div class="destaque-texto">
+            <p class="destaque-chapeu">Jardim Bela Vista, Cravinhos</p>
+            <h2>Retire na loja ou receba em casa</h2>
+            <p>Compre pelo site e retire na Rua Sante Pieri, receba em Cravinhos ou solicite o envio para outra cidade.</p>
+            <a class="btn btn-branco" href="#chegar">Como chegar</a>
+          </div>
+          <div class="destaque-foto"><img src="img/fachada.webp" width="900" height="1600" alt="Fachada do Pescão, com as listras coloridas do logo" loading="lazy"></div>
+        </li>
+      </ul>
+      <button class="seta seta-ant" type="button" id="destaque-ant" aria-label="Destaque anterior"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
+      <button class="seta seta-prox" type="button" id="destaque-prox" aria-label="Próximo destaque"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
+      <div class="pontos" id="pontos"></div>
+    </div>
+    <ul class="fatos">
+      <li class="fato"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M4 13 6 6h20l2 7M4 13h24M4 13v13h24V13M12 26v-7h8v7"/></svg><span><strong>Retire na loja</strong>R. Sante Pieri, 131</span></li>
+      <li class="fato"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M3 9h16v13H3zM19 13h5l4 5v4h-9"/><circle cx="8" cy="24" r="2.5"/><circle cx="23" cy="24" r="2.5"/></svg><span><strong>Entrega em Cravinhos</strong>Taxa informada pelo WhatsApp</span></li>
+      <li class="fato"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M5 10 16 5l11 5v12l-11 5-11-5Z"/><path d="M5 10l11 5 11-5M16 15v12"/></svg><span><strong>Envio para outras cidades</strong>Frete calculado no pedido</span></li>
+      <li class="fato"><svg viewBox="0 0 32 32" aria-hidden="true"><rect x="4" y="8" width="24" height="16" rx="3"/><path d="M4 13h24M9 19h5"/></svg><span><strong>Pix ou cartão</strong>Dinheiro na retirada</span></li>
+    </ul>
+  </div>
+</section>
+
+<main id="conteudo">
+  <svg class="agua-linha" viewBox="0 0 1440 70" preserveAspectRatio="none" aria-hidden="true"><path fill="#EEF3F8" d="M0 34c160-22 330-26 520-8s380 30 560 14 260-30 360-26v56H0Z"/><path fill="none" stroke="#C9D8E8" stroke-width="2" d="M0 34c160-22 330-26 520-8s380 30 560 14 260-30 360-26" vector-effect="non-scaling-stroke"/></svg>
+  <section class="secao secao-nevoa" id="produtos" aria-labelledby="titulo-produtos">
+    <div class="envoltorio">
+      <div class="secao-cabeca" data-revela>
+        <h2 id="titulo-produtos">Equipamento para a sua pescaria</h2>
+        <p>Escolha a categoria e abra o produto para ver as cores, os tamanhos e o lado da manivela. Pague pelo site e retire na loja, receba em casa ou solicite o envio.</p>
+      </div>
+      <div class="categorias" id="categorias" role="group" aria-label="Filtrar por categoria" data-revela></div>
+      <ul class="vitrine" id="vitrine" aria-label="Produtos"></ul>
+      <div class="procura" data-revela><h3>Não encontrou o que procura?</h3><p>Temos muito mais itens na loja. Consulte a nossa equipe pelo WhatsApp.</p><a class="btn btn-zap" id="procura" href="https://wa.me/551639514462" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-zap"/></svg>Consultar pelo WhatsApp</a></div>
+    </div>
+  </section>
+
+  <div class="equipamento-topo" aria-hidden="true">
+    <svg class="boia" width="40" height="96"><use href="#i-boia"/></svg>
+    <svg class="agua-linha" viewBox="0 0 1440 70" preserveAspectRatio="none"><path fill="#0B2B45" d="M0 30c200-24 400-26 600-6s400 28 560 12c110-11 200-22 280-20v54H0Z"/><path fill="none" stroke="#3E77B0" stroke-width="2" d="M0 30c200-24 400-26 600-6s400 28 560 12c110-11 200-22 280-20" vector-effect="non-scaling-stroke"/></svg>
+  </div>
+  <section class="equipamento" id="equipamento" aria-labelledby="titulo-equipamento">
+    <div class="envoltorio equipamento-grade">
+      <div class="equipamento-texto">
+        <h2 id="titulo-equipamento">Monte seu equipamento</h2>
+        <p>Informe o peixe e o que você já tem. Montamos uma lista com vara, molinete ou carretilha, linha, anzol e isca, e você leva tudo para o carrinho de uma vez.</p>
+        <fieldset class="passo">
+          <legend><b>1</b>Qual peixe você vai pescar?</legend>
+          <div class="peixes" id="peixes"></div>
+        </fieldset>
+        <fieldset class="passo">
+          <legend><b>2</b>Você já tem vara e molinete ou carretilha?</legend>
+          <div class="tens">
+            <label class="tem"><input type="radio" name="tem" value="nao" checked><strong>Ainda não</strong><small>Quero o conjunto completo</small></label>
+            <label class="tem"><input type="radio" name="tem" value="sim"><strong>Já tenho</strong><small>Quero só linha, anzol e isca</small></label>
+          </div>
+        </fieldset>
+      </div>
+      <div class="lista" id="lista" aria-live="polite"></div>
+    </div>
+  </section>
+  <svg class="agua-linha" viewBox="0 0 1440 70" preserveAspectRatio="none" aria-hidden="true" style="background:#0B2B45"><path fill="#FFFFFF" d="M0 36c180-22 380-24 580-6s400 30 580 14c100-9 190-20 280-18v44H0Z"/></svg>
+
+  <section class="secao" id="loja" aria-labelledby="titulo-loja">
+    <div class="envoltorio loja-grade">
+      <div class="loja-fotos" data-revela>
+        <figure><img src="img/fachada.webp" width="900" height="1600" alt="Fachada do Pescão na Rua Sante Pieri" loading="lazy"></figure>
+        <figure><img src="img/corredor.webp" width="900" height="1600" alt="Corredor da loja, com varas, rações e acessórios" loading="lazy"></figure>
+      </div>
+      <div class="loja-texto" data-revela style="--i:1">
+        <h2 id="titulo-loja">A loja de pesca do Jardim Bela Vista</h2>
+        <p>Somos pet shop, loja de rações e de artigos para pesca. Atendemos quem pesca no pesqueiro, na represa e no rio, e ajudamos a escolher o equipamento certo para cada peixe.</p>
+        <p class="nota-google"><strong>4,8</strong><span>no Google, com 228 avaliações</span></p>
+        <div class="avaliacoes">
+          <blockquote class="avaliacao"><p>“Melhor loja de artigo de pesca da cidade!”</p><footer>Avaliação no Google</footer></blockquote>
+          <blockquote class="avaliacao"><p>“Ótimo atendimento, variedade de produtos e ótimos preços.”</p><footer>Avaliação no Google</footer></blockquote>
+          <blockquote class="avaliacao"><p>“Tudo que precisei no setor deles sempre achei.”</p><footer>Avaliação no Google</footer></blockquote>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="secao secao-nevoa" id="chegar" aria-labelledby="titulo-chegar">
+    <div class="envoltorio">
+      <div class="secao-cabeca" data-revela><h2 id="titulo-chegar">Como chegar</h2></div>
+      <div class="chegar" data-revela>
+        <iframe class="chegar-mapa" title="Mapa do Pescão em Cravinhos" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Pesc%C3%A3o%20Pet%20Shop%2C%20R.%20Sante%20Pieri%2C%20131%2C%20Cravinhos%20-%20SP&amp;z=16&amp;output=embed"></iframe>
+        <div class="chegar-dados">
+          <div><h3>Endereço</h3><p>R. Sante Pieri, 131<br>Jardim Bela Vista, Cravinhos (SP)</p></div>
+          <div><h3>Telefone e WhatsApp</h3><a href="tel:+551639514462">(16) 3951-4462</a></div>
+          <div><h3>Instagram</h3><a href="https://www.instagram.com/pescaocravinhos" target="_blank" rel="noopener">@pescaocravinhos</a></div>
+          <a class="btn" href="https://www.google.com/maps/dir/?api=1&amp;destination=R.%20Sante%20Pieri%2C%20131%2C%20Cravinhos%20-%20SP" target="_blank" rel="noopener">Abrir a rota no mapa</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<svg class="agua-linha rodape-onda" viewBox="0 0 1440 70" preserveAspectRatio="none" aria-hidden="true"><path fill="#0B2B45" d="M0 34c200-24 420-26 640-6s420 30 560 14c90-10 170-22 240-20v48H0Z"/><path fill="none" stroke="#3E77B0" stroke-width="2" d="M0 34c200-24 420-26 640-6s420 30 560 14c90-10 170-22 240-20" vector-effect="non-scaling-stroke"/></svg>
+<footer class="rodape">
+  <div class="envoltorio rodape-grade">
+    <a class="rodape-marca" href="#" translate="no" aria-label="Pescão, voltar ao início">
+      <img src="img/logo.png" width="750" height="314" alt="">
+      <span>Pet shop, rações e artigos para pesca</span>
+    </a>
+    <p class="redes">
+      <a href="https://www.facebook.com/pescaocravinhos" target="_blank" rel="noopener" aria-label="Facebook"><svg aria-hidden="true"><use href="#i-facebook"/></svg></a>
+      <a href="https://www.instagram.com/pescaocravinhos" target="_blank" rel="noopener" aria-label="Instagram"><svg aria-hidden="true"><use href="#i-instagram"/></svg></a>
+    </p>
+  </div>
+</footer>
+
+<a class="flutuante" id="flutuante" href="https://wa.me/551639514462" target="_blank" rel="noopener" aria-label="Conversar no WhatsApp" title="Conversar no WhatsApp" tabindex="-1">
+  <svg aria-hidden="true"><use href="#i-zap"/></svg>
+</a>
+
+<dialog class="sacola" id="sacola" aria-labelledby="sacola-titulo">
+  <div class="sacola-topo">
+    <h2 id="sacola-titulo">Seu carrinho</h2>
+    <button class="fechar" type="button" data-fechar aria-label="Fechar carrinho"><svg aria-hidden="true"><use href="#i-x"/></svg></button>
+  </div>
+  <div class="sacola-corpo" id="sacola-corpo"></div>
+  <div class="sacola-pe" id="sacola-pe"></div>
+</dialog>
+
+<dialog class="ficha" id="ficha" aria-labelledby="ficha-nome"></dialog>
+
+<script>
+/* ============================================================
+   DADOS - o que a loja muda fica aqui em cima
+   ============================================================ */
+const WHATSAPP = "551639514462";  /* o Facebook da loja diz que o WhatsApp e o mesmo numero do fixo */
+const LOJA = "R. Sante Pieri, 131, Jardim Bela Vista, Cravinhos";
+const CATEGORIAS = [
+  ["molinetes", "Molinetes", "elite-gold-4c2648"],
+  ["carretilhas", "Carretilhas", "m21-a3b68b"],
+  ["varas", "Varas e kits", "kit-crobat-ae5589"],
+  ["iscas", "Iscas", "pimentinha-575e2f"],
+  ["linhas", "Linhas", "victoria-mono-14e91e"],
+  ["anzois", "Anzóis e acessórios", "chinu-d767bc"],
+];
+/* cada variacao: nome, foto e, quando muda, preco proprio; esgotado: true tira da venda.
+   lados: true = a pessoa escolhe a manivela (direita ou esquerda).
+   PRECOS E MARCAS DE EXEMPLO: trocar pela tabela e pelo estoque da loja */
+const v = (n, f, extra = {}) => ({ n, f, ...extra });
+const PRODUTOS = [
+  { id: "mp20", cat: "molinetes", marca: "Albatroz Fishing", nome: "Molinete MP20 3 rolamentos", desc: "Molinete leve para represa e rio, carretel de grafite.", preco: 72.90, rotulo: "Cor",
+    vars: [v("Azul", "mp20-50a160"), v("Prata", "mp20-1097c4"), v("Vermelho", "mp20-1bd830")] },
+  { id: "elite-gold", cat: "molinetes", marca: "Marine Sports", nome: "Molinete Elite Gold 2+1 rolamentos", desc: "Molinete de entrada, disponível em vários tamanhos.", selo: "Mais vendido", ini: "2000", preco: 78.90, rotulo: "Tamanho",
+    vars: [v("500", "elite-gold-52cad7", { preco: 78.90 }), v("1000", "elite-gold-50ff59", { preco: 78.90 }), v("2000", "elite-gold-4c2648", { preco: 78.90 }), v("3000", "elite-gold-50ff59", { preco: 88.90 }), v("4000", "elite-gold-4c2648", { preco: 96.90 }), v("6000", "elite-gold-4c2648", { preco: 118.90 })] },
+  { id: "arena-fd", cat: "molinetes", marca: "Marine Sports", nome: "Molinete Arena FD", desc: "Fricção dianteira, para tilápia, lambari e traíra.", ini: "2000", preco: 73.90, rotulo: "Tamanho",
+    vars: [v("2000", "arena-fd-f0a179", { preco: 73.90 }), v("3000", "arena-fd-f0a179", { preco: 78.90 }), v("4000", "arena-fd-f0a179", { preco: 78.90 })] },
+  { id: "speedfish", cat: "molinetes", marca: "Albatroz Fishing", nome: "Micro molinete Speedfish 500", desc: "Pequeno e leve, para lambari e iscas leves.", preco: 79.90, rotulo: "Cor",
+    vars: [v("Amarelo", "speedfish-3b7677"), v("Vermelho", "speedfish-8df263")] },
+  { id: "m21", cat: "carretilhas", marca: "Albatroz Fishing", nome: "Carretilha M21 Pro 6 rolamentos", desc: "Perfil baixo, para tucunaré e traíra.", lados: true, ini: "Azul", preco: 219.90, rotulo: "Cor",
+    vars: [v("Acqua", "m21-1f9105"), v("Gold", "m21-5e6870"), v("Azul", "m21-a3b68b"), v("Vermelho", "m21-ea6950")] },
+  { id: "s22", cat: "carretilhas", marca: "Albatroz Fishing", nome: "Carretilha S22", desc: "Perfil baixo em cinco cores.", lados: true, preco: 189.90, rotulo: "Cor",
+    vars: [v("Vermelho", "s22-ec6640"), v("Azul", "s22-c3b016"), v("Silver", "s22-7df63d"), v("Amarelo", "s22-8b5d57")] },
+  { id: "crobat", cat: "carretilhas", marca: "Maruri", nome: "Carretilha New Crobat 7+1 rolamentos", desc: "Drag de 7 kg, corpo leve e colorido.", lados: true, ini: "Laranja", preco: 229.90, rotulo: "Cor",
+    vars: [v("Verde", "crobat-49e4d9"), v("Rosa", "crobat-bc204a"), v("Laranja", "crobat-4485e5"), v("Acqua", "crobat-03bdcb")] },
+  { id: "black-tamba", cat: "carretilhas", marca: "Maruri", nome: "Carretilha Black Tamba BT11", desc: "11 rolamentos, para peixes de pesqueiro.", lados: true, preco: 268.90, vars: [v("", "black-tamba")] },
+  { id: "agata-mol", cat: "varas", marca: "Albatroz Fishing", nome: "Vara para molinete Agata 8-17 lb", desc: "Duas partes, ação média, em três cores.", ini: "Acqua", preco: 64.90, rotulo: "Cor",
+    vars: [v("Vermelho", "agata-mol-9d3b04"), v("Acqua", "agata-mol-99b113"), v("Gold", "agata-mol-e41144")] },
+  { id: "agata-car", cat: "varas", marca: "Albatroz Fishing", nome: "Vara para carretilha Agata 8-17 lb", desc: "A mesma linha Agata, com passadores para carretilha.", ini: "Vermelho", preco: 69.90, rotulo: "Cor",
+    vars: [v("Vermelho", "agata-car-8e9f7a"), v("Acqua", "agata-car-fe4a41"), v("Gold", "agata-car-9a79e2")] },
+  { id: "triton", cat: "varas", marca: "Maruri", nome: "Vara telescópica Triton 40% carbono", desc: "Fechada, cabe na mochila.", ini: "2,70 m", preco: 15.90, rotulo: "Tamanho",
+    vars: [v("1,80 m", "triton-2258a0", { preco: 15.90 }), v("2,10 m", "triton-2258a0", { preco: 18.90 }), v("2,40 m", "triton-2258a0", { preco: 19.90 }), v("2,70 m", "triton-2258a0", { preco: 22.90 }), v("3,00 m", "triton-2258a0", { preco: 27.90 }), v("3,60 m", "triton-2258a0", { preco: 28.90 }), v("3,90 m", "triton-2258a0", { preco: 35.90 }), v("4,20 m", "triton-2258a0", { preco: 36.90 }), v("4,50 m", "triton-2258a0", { preco: 45.90 }), v("5,40 m", "triton-2258a0", { preco: 78.90 })] },
+  { id: "kit-crobat", cat: "varas", marca: "Maruri", nome: "Kit vara + carretilha Crobat", desc: "Vara e carretilha combinadas, prontas para usar.", selo: "Kit", lados: true, ini: "Azul", preco: 279.90, rotulo: "Cor",
+    vars: [v("Azul", "kit-crobat-ae5589"), v("Laranja", "kit-crobat-25dcac"), v("Verde", "kit-crobat-922419"), v("Rosa", "kit-crobat-5b516a")] },
+  { id: "pimentinha", cat: "iscas", marca: "Maruri", nome: "Isca artificial Pimentinha 70", desc: "7 cm, 6,5 g, meia-água, para tucunaré e traíra.", selo: "Mais vendida", ini: "311", preco: 34.90, rotulo: "Cor",
+    vars: [v("311", "pimentinha-575e2f"), v("380", "pimentinha-1930d9"), v("400", "pimentinha-5d5bd4"), v("920", "pimentinha-73a0b6"), v("05", "pimentinha-931c42"), v("Camarão", "pimentinha-4c722d"), v("Cromo", "pimentinha-86d741"), v("Glow", "pimentinha-083d3a"), v("Osso", "pimentinha-8b7a44"), v("140", "pimentinha-117dbe")] },
+  { id: "magic-dancer", cat: "iscas", marca: "Maruri", nome: "Isca artificial Magic Dancer 50F", desc: "Meia-água de 5 cm.", preco: 29.90, rotulo: "Cor",
+    vars: [v("10", "magic-dancer-9e7f54"), v("11", "magic-dancer-e155f0"), v("240UV", "magic-dancer-84766b"), v("241", "magic-dancer-d9837e"), v("246", "magic-dancer-1a5ac2"), v("274", "magic-dancer-6f5e23"), v("310UV", "magic-dancer-c31e31"), v("CLUV", "magic-dancer-cc933b"), v("CROMO", "magic-dancer-6080b5")] },
+  { id: "winner", cat: "iscas", marca: "Maruri", nome: "Isca artificial Winner de superfície", desc: "Trabalha na superfície e faz barulho.", preco: 29.90, rotulo: "Cor",
+    vars: [v("1", "winner-abdc38"), v("2", "winner-b8f757"), v("3", "winner-a4be11"), v("4", "winner-c29769"), v("5", "winner-e38774"), v("6", "winner-0fce8b"), v("7", "winner-623f15"), v("8", "winner-91f168"), v("9", "winner-454048"), v("10", "winner-6d2bd2"), v("11", "winner-2e3a8a")] },
+  { id: "rei-do-rio", cat: "iscas", marca: "Marine Sports", nome: "Isca artificial Rei do Rio", desc: "Meia-água para rio.", preco: 44.90, rotulo: "Cor",
+    vars: [v("110OS", "rei-do-rio-2057ca"), v("20", "rei-do-rio-5d91d1"), v("032", "rei-do-rio-e54786"), v("02", "rei-do-rio-9647cc"), v("024", "rei-do-rio-d647a5"), v("07", "rei-do-rio-0b6e45"), v("04", "rei-do-rio-8fc1d0"), v("03", "rei-do-rio-555d25"), v("01", "rei-do-rio-bd776a"), v("06", "rei-do-rio-cdaff8"), v("08", "rei-do-rio-7cf4fc"), v("014", "rei-do-rio-3f7b63"), v("N06", "rei-do-rio-8d6336"), v("N03", "rei-do-rio-c6eb62"), v("N04", "rei-do-rio-f84045"), v("N08", "rei-do-rio-07c773")] },
+  { id: "savage", cat: "iscas", marca: "Marine Sports", nome: "Isca artificial Savage 85", desc: "8,5 cm, 9 g, meia-água.", preco: 44.90, rotulo: "Cor",
+    vars: [v("T006", "savage-6ac6b9"), v("S094", "savage-28ea0e"), v("116", "savage-099a42"), v("YTI", "savage-62ac8d"), v("024", "savage-f49022"), v("T005", "savage-1b09b7"), v("14T", "savage-a012f6")] },
+  { id: "milho", cat: "iscas", marca: "Maruri", nome: "Milho artificial (pacote com 20)", desc: "Para tilápia e pacu, não desmancha na água.", preco: 13.90, rotulo: "Cor",
+    vars: [v("Branco", "milho-722eca"), v("Amarelo", "milho-60240d"), v("Vermelho", "milho-8c2ff5")] },
+  { id: "victoria-mono", cat: "linhas", marca: "Maruri", nome: "Linha monofilamento Victoria Crystal 100 m", desc: "Transparente, para molinete e carretilha.", ini: "0,30 mm", preco: 19.90, rotulo: "Espessura",
+    vars: [v("0,20 mm", "victoria-mono-14e91e"), v("0,23 mm", "victoria-mono-14e91e"), v("0,26 mm", "victoria-mono-14e91e"), v("0,28 mm", "victoria-mono-14e91e"), v("0,30 mm", "victoria-mono-14e91e"), v("0,33 mm", "victoria-mono-14e91e"), v("0,37 mm", "victoria-mono-14e91e"), v("0,40 mm", "victoria-mono-14e91e"), v("0,46 mm", "victoria-mono-14e91e"), v("0,49 mm", "victoria-mono-14e91e"), v("0,52 mm", "victoria-mono-14e91e")] },
+  { id: "victoria-multi", cat: "linhas", marca: "Maruri", nome: "Linha multifilamento Victoria 4x 100 m", desc: "Quatro fios trançados, não estica.", ini: "0,24 mm", preco: 25.90, rotulo: "Espessura",
+    vars: [v("0,14 mm", "victoria-multi-d86d15"), v("0,18 mm", "victoria-multi-d86d15"), v("0,20 mm", "victoria-multi-d86d15"), v("0,24 mm", "victoria-multi-d86d15"), v("0,25 mm", "victoria-multi-d86d15"), v("0,27 mm", "victoria-multi-d86d15"), v("0,30 mm", "victoria-multi-d86d15"), v("0,34 mm", "victoria-multi-d86d15"), v("0,35 mm", "victoria-multi-d86d15"), v("0,40 mm", "victoria-multi-d86d15"), v("0,45 mm", "victoria-multi-d86d15"), v("0,50 mm", "victoria-multi-d86d15"), v("0,55 mm", "victoria-multi-d86d15"), v("0,58 mm", "victoria-multi-d86d15"), v("0,60 mm", "victoria-multi-d86d15")] },
+  { id: "vexter", cat: "linhas", marca: "Marine Sports", nome: "Linha Vexter Ultimate Soft 300 m", desc: "Monofilamento macio, carretel de 300 m.", preco: 29.90, rotulo: "Espessura",
+    vars: [v("0,33 mm", "vexter-00f688"), v("0,37 mm", "vexter-00f688"), v("0,40 mm", "vexter-00f688")] },
+  { id: "chinu", cat: "anzois", marca: "Marine Sports", nome: "Anzol Chinu Black Nickel (cartela)", desc: "Para tilápia e lambari.", ini: "Nº 4", preco: 14.90, rotulo: "Número",
+    vars: [v("Nº 2", "chinu-d767bc"), v("Nº 3", "chinu-d767bc"), v("Nº 4", "chinu-d767bc"), v("Nº 5", "chinu-d767bc"), v("Nº 6", "chinu-d767bc"), v("Nº 7", "chinu-d767bc"), v("Nº 8", "chinu-d767bc"), v("Nº 9", "chinu-d767bc")] },
+  { id: "pacu", cat: "anzois", marca: "Maruri", nome: "Anzol Pacu Pinnacle (cartela)", desc: "Reforçado, para pacu e tambaqui.", ini: "Nº 2/0", preco: 24.90, rotulo: "Número",
+    vars: [v("Nº 1", "pacu-cf050a"), v("Nº 2", "pacu-cf050a"), v("Nº 4", "pacu-cf050a"), v("Nº 1/0", "pacu-cf050a"), v("Nº 2/0", "pacu-cf050a"), v("Nº 3/0", "pacu-cf050a"), v("Nº 4/0", "pacu-cf050a"), v("Nº 5/0", "pacu-cf050a")] },
+  { id: "maruseigo", cat: "anzois", marca: "Marine Sports", nome: "Anzol Maruseigo Gold (cartela)", desc: "Para isca de massa e minhoca.", ini: "Nº 10", preco: 21.90, rotulo: "Número",
+    vars: [v("Nº 6", "maruseigo-75f90e"), v("Nº 8", "maruseigo-75f90e"), v("Nº 10", "maruseigo-75f90e"), v("Nº 12", "maruseigo-75f90e"), v("Nº 14", "maruseigo-75f90e"), v("Nº 16", "maruseigo-75f90e"), v("Nº 18", "maruseigo-75f90e"), v("Nº 20", "maruseigo-75f90e"), v("Nº 22", "maruseigo-75f90e"), v("Nº 24", "maruseigo-75f90e"), v("Nº 26", "maruseigo-75f90e"), v("Nº 28", "maruseigo-75f90e"), v("Nº 30", "maruseigo-75f90e")] },
+  { id: "girador", cat: "anzois", marca: "Maruri", nome: "Girador simples níquel", desc: "Evita que a linha torça.", ini: "Nº 10", preco: 12.90, rotulo: "Número",
+    vars: [v("Nº 1", "girador-5d9183"), v("Nº 2", "girador-5d9183"), v("Nº 4", "girador-5d9183"), v("Nº 6", "girador-5d9183"), v("Nº 8", "girador-5d9183"), v("Nº 10", "girador-5d9183"), v("Nº 12", "girador-5d9183"), v("Nº 14", "girador-5d9183"), v("Nº 16", "girador-5d9183"), v("Nº 18", "girador-5d9183"), v("Nº 1/0", "girador-5d9183"), v("Nº 2/0", "girador-5d9183"), v("Nº 3/0", "girador-5d9183"), v("Nº 4/0", "girador-5d9183"), v("Nº 5/0", "girador-5d9183"), v("Nº 6/0", "girador-5d9183")] },
+  { id: "snap", cat: "anzois", marca: "Marine Sports", nome: "Snap Quick Lock", desc: "Troca a isca sem cortar a linha.", preco: 22.90, rotulo: "Número",
+    vars: [v("Nº 1", "snap-799633"), v("Nº 2", "snap-799633"), v("Nº 3", "snap-799633")] },
+  { id: "empate", cat: "anzois", marca: "Marine Sports", nome: "Empate de aço inox (rolo de 10 m + 70 luvas)", desc: "Para peixe de dente: dourado e traíra.", ini: "30 lb", preco: 19.90, rotulo: "Resistência",
+    vars: [v("5 lb", "empate-a4f804"), v("10 lb", "empate-a4f804"), v("20 lb", "empate-a4f804"), v("30 lb", "empate-a4f804"), v("40 lb", "empate-a4f804"), v("50 lb", "empate-a4f804"), v("60 lb", "empate-a4f804"), v("75 lb", "empate-a4f804"), v("120 lb", "empate-a4f804")] },
+  { id: "alicate", cat: "anzois", marca: "Maruri", nome: "Alicate de corte DF06C 16 cm", desc: "Corta linha e anzol.", preco: 24.90, vars: [v("", "alicate")] },
+  { id: "capa", cat: "anzois", marca: "Albatroz Fishing", nome: "Capa protetora de molinete (G)", desc: "Protege o molinete no transporte.", preco: 43.90, vars: [v("", "capa")] },
+];
+/* Monte seu equipamento: sugestao inicial por peixe. [produto, variacao, manivela] */
+const PEIXES = {
+  tilapia: { nome: "Tilápia", onde: "Pesqueiro e represa",
+    conjunto: [["arena-fd", "2000"], ["agata-mol", "Acqua"]],
+    resto: [["victoria-mono", "0,26 mm"], ["chinu", "Nº 2"], ["girador", "Nº 10"], ["milho", "Amarelo"]] },
+  traira: { nome: "Traíra", onde: "Represa e lagoa",
+    conjunto: [["m21", "Vermelho", "Direita"], ["agata-car", "Vermelho"]],
+    resto: [["victoria-multi", "0,30 mm"], ["empate", "30 lb"], ["winner", "4"], ["pimentinha", "311"]] },
+  tucunare: { nome: "Tucunaré", onde: "Represa",
+    conjunto: [["s22", "Azul", "Direita"], ["agata-car", "Acqua"]],
+    resto: [["victoria-multi", "0,24 mm"], ["snap", "Nº 2"], ["magic-dancer", "10"], ["savage", "YTI"]] },
+  pacu: { nome: "Pacu e tambaqui", onde: "Pesqueiro",
+    conjunto: [["kit-crobat", "Azul", "Direita"]],
+    resto: [["vexter", "0,40 mm"], ["pacu", "Nº 2/0"], ["girador", "Nº 4"], ["milho", "Branco"]] },
+  lambari: { nome: "Lambari", onde: "Rio, lagoa e represa",
+    conjunto: [["triton", "3,00 m"]],
+    resto: [["victoria-mono", "0,20 mm"], ["maruseigo", "Nº 6"], ["girador", "Nº 14"]] },
+};
+
+const $ = (s, el = document) => el.querySelector(s);
+const reduzir = matchMedia("(prefers-reduced-motion: reduce)");
+const fotoP = (n) => `img/produtos/${n}.webp`;
+const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+const ler = (k, padrao) => { try { const v = localStorage.getItem(k); return v ? JSON.parse(v) : padrao; } catch { return padrao; } };
+const gravar = (k, v) => { try { localStorage.setItem(k, JSON.stringify(v)); } catch {} };
+const reais = (v) => v.toLocaleString("pt-BR", { style: "currency", currency: "BRL" });
+const zap = (texto) => `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(texto)}`;
+const porId = (id) => PRODUTOS.find((p) => p.id === id);
+const precoDe = (p, va) => va.preco ?? p.preco;
+/* "Cor: Azul, manivela direita" */
+const detalhe = (p, va, l) => [va.n ? (p.rotulo === "Número" ? va.n : `${p.rotulo}: ${va.n}`) : "", l ? `manivela ${l.toLowerCase()}` : ""].filter(Boolean).join(", ");
+
+/* ---------- movimento padrao: revela cada bloco uma vez, ao entrar na tela ---------- */
+const observador = new IntersectionObserver((itens) => {
+  itens.forEach((it) => { if (it.isIntersecting) { it.target.classList.add("visto"); observador.unobserve(it.target); } });
+}, { rootMargin: "0px 0px -8% 0px", threshold: .12 });
+document.querySelectorAll("[data-revela]").forEach((el) => observador.observe(el));
+
+/* troca de conteudo: some e reaparece rapido, para mostrar o que mudou */
+function piscar(el) {
+  if (reduzir.matches || !el || !el.animate) return;
+  el.animate([{ opacity: .35, transform: "translateY(3px)" }, { opacity: 1, transform: "none" }], { duration: 260, easing: "cubic-bezier(0.23, 1, 0.32, 1)" });
+}
+
+/* ---------- categorias, filtros e vitrine ---------- */
+const tem = (va) => !va.esgotado;
+const varInicial = (p) => { const k = p.vars.findIndex((va) => va.n === p.ini && tem(va)); return k >= 0 ? k : Math.max(0, p.vars.findIndex(tem)); };
+const PLURAL = { "Cor": "cores", "Tamanho": "tamanhos", "Espessura": "espessuras", "Número": "números", "Resistência": "resistências" };
+const precoCartao = (p) => { const ps = p.vars.map((va) => precoDe(p, va)), min = Math.min(...ps); return min < Math.max(...ps) ? `<small>a partir de</small> ${reais(min)}` : reais(min); };
+const iconeTodos = `<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h6v6H4zM14 5h6v6h-6zM4 15h6v6H4zM14 15h6v6h-6z"/></svg>`;
+$("#categorias").innerHTML = [["todos", "Todos os produtos"], ...CATEGORIAS].map(([id, nome, f]) => `<button class="categoria${f ? "" : " categoria-todos"}" type="button" data-cat="${id}" aria-pressed="${id === "todos"}"><span>${f ? `<img src="${fotoP(f)}" alt="" loading="lazy">` : iconeTodos}</span><span>${nome}</span></button>`).join("");
+
+/* todos os cartoes tem o mesmo desenho; com escolha (cor, tamanho, manivela) o botao abre a pagina do produto */
+const precisaEscolher = (p) => p.vars.length > 1 || p.lados;
+const cartao = (p) => {
+  const va = p.vars[varInicial(p)];
+  const botao = !p.vars.some(tem) ? `<button class="btn" type="button" disabled>Esgotado</button>`
+    : precisaEscolher(p) ? `<button class="btn" type="button" data-abrir="${p.id}" aria-label="Adicionar: escolher ${p.vars.length > 1 ? `entre ${p.vars.length} ${PLURAL[p.rotulo]}` : "o lado da manivela"}"><svg aria-hidden="true"><use href="#i-sacola"/></svg>Adicionar</button>`
+    : `<button class="btn" type="button" data-adicionar="${p.id}"><svg aria-hidden="true"><use href="#i-sacola"/></svg>Adicionar</button>`;
+  return `
+  <li class="produto">
+    <a class="produto-foto" href="#produto-${p.id}" data-abrir="${p.id}" tabindex="-1" aria-hidden="true"><img src="${fotoP(va.f)}" width="600" height="600" alt="" loading="lazy">${p.selo ? `<span class="selo">${p.selo}</span>` : ""}</a>
+    <div class="produto-info">
+      <p class="produto-marca">${esc(p.marca)}</p>
+      <h4><a href="#produto-${p.id}" data-abrir="${p.id}">${esc(p.nome)}</a></h4>
+      <p class="produto-desc">${esc(p.desc)}</p>
+      <p class="produto-preco">${precoCartao(p)}</p>
+      ${botao}
+    </div>
+  </li>`;
+};
+
+$("#vitrine").innerHTML = CATEGORIAS.map(([id, nome]) => {
+  const lista = PRODUTOS.filter((p) => p.cat === id);
+  return `<li class="prateleira" data-cat="${id}">
+    <div class="prateleira-topo">
+      <h3 id="fileira-${id}">${nome}</h3>
+      <button class="ver-tudo" type="button" data-ver="${id}">Ver tudo (${lista.length})</button>
+      <div class="prateleira-setas">
+        <button class="seta" type="button" data-passo="-1" aria-label="Voltar em ${nome}"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
+        <button class="seta" type="button" data-passo="1" aria-label="Mais em ${nome}"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
+      </div>
+    </div>
+    <ul class="fileira" aria-labelledby="fileira-${id}">${lista.map(cartao).join("")}</ul>
+  </li>`;
+}).join("");
+$("#procura").href = zap("Olá! Vim pelo site e gostaria de saber se vocês têm um produto.");
+
+function filtrar(cat) {
+  document.querySelectorAll("[data-cat][aria-pressed]").forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.cat === cat)));
+  document.querySelectorAll(".prateleira").forEach((li) => li.classList.toggle("some", cat !== "todos" && li.dataset.cat !== cat));
+  $("#vitrine").classList.toggle("filtrada", cat !== "todos");
+  setas();
+  piscar($("#vitrine"));
+}
+const rolar = (el, block = "start") => el.scrollIntoView({ behavior: reduzir.matches ? "auto" : "smooth", block });
+$("#categorias").addEventListener("click", (e) => { const b = e.target.closest("[data-cat]"); if (b) filtrar(b.dataset.cat); });
+document.querySelectorAll("[data-ir]").forEach((a) => a.addEventListener("click", () => { filtrar(a.dataset.ir); rolar($("#categorias")); }));
+/* botao do banner: abre o produto */
+document.querySelectorAll("[data-produto]").forEach((b) => b.addEventListener("click", () => abrirFicha(b.dataset.produto)));
+$("#vitrine").addEventListener("click", (e) => {
+  const ver = e.target.closest("[data-ver]");
+  if (ver) { filtrar(ver.dataset.ver); rolar($("#categorias")); return; }
+  const seta = e.target.closest("[data-passo]"); if (!seta) return;
+  const fileira = $(".fileira", seta.closest(".prateleira"));
+  fileira.scrollBy({ left: seta.dataset.passo * fileira.clientWidth, behavior: reduzir.matches ? "auto" : "smooth" });
+});
+/* setas so aparecem quando a fileira passa da tela; apagam nas pontas */
+function setas() {
+  document.querySelectorAll(".prateleira").forEach((pr) => {
+    const f = $(".fileira", pr), [ant, prox] = pr.querySelectorAll("[data-passo]");
+    const sobra = f.scrollWidth - f.clientWidth;
+    $(".prateleira-setas", pr).hidden = sobra < 2;
+    ant.disabled = f.scrollLeft < 2;
+    prox.disabled = f.scrollLeft > sobra - 2;
+  });
+}
+document.querySelectorAll(".fileira").forEach((f) => f.addEventListener("scroll", setas, { passive: true }));
+addEventListener("resize", setas);
+setas();
+
+/* ---------- pagina do produto ---------- */
+const ficha = $("#ficha");
+let fichaP = null, fichaK = 0, fichaL = "Direita", fichaFecha;
+function escolhaFicha(p) {
+  let html = "";
+  if (p.vars.length > 1) {
+    const opcoes = p.vars.map((va, i) => {
+      const fora = tem(va) ? "" : ", sem estoque";
+      return `<label class="opcao"><input type="radio" name="ficha-var" value="${i}"${i === fichaK ? " checked" : ""}><span>${esc(va.n)}${fora}</span></label>`;
+    }).join("");
+    html += `<fieldset class="variacao"><legend>${p.rotulo}: <strong id="ficha-var-nome">${esc(p.vars[fichaK].n)}</strong></legend><div class="opcoes">${opcoes}</div></fieldset>`;
+  }
+  if (p.lados) {
+    const opcoes = ["Direita", "Esquerda"].map((l) => `<label class="opcao"><input type="radio" name="ficha-lado" value="${l}"${l === fichaL ? " checked" : ""}><span>${l}</span></label>`).join("");
+    html += `<fieldset class="variacao"><legend>Manivela: <strong id="ficha-lado-nome">${fichaL}</strong></legend><div class="opcoes">${opcoes}</div></fieldset>`;
+  }
+  return html;
+}
+function desenharFicha() {
+  const p = fichaP, va = p.vars[fichaK];
+  ficha.innerHTML = `
+    <button class="fechar" type="button" data-fechar-ficha aria-label="Fechar"><svg aria-hidden="true"><use href="#i-x"/></svg></button>
+    <div class="ficha-foto"><img id="ficha-img" src="${fotoP(va.f)}" width="600" height="600" alt="">${p.selo ? `<span class="selo">${p.selo}</span>` : ""}</div>
+    <div class="ficha-info">
+      <p class="produto-marca">${esc(p.marca)}</p>
+      <h2 id="ficha-nome">${esc(p.nome)}</h2>
+      <p class="ficha-preco" id="ficha-preco"></p>
+      <p class="ficha-desc">${esc(p.desc)}</p>
+      ${escolhaFicha(p)}
+      <button class="btn ficha-add" type="button" id="ficha-add" data-adicionar="${p.id}"></button>
+      <p class="ficha-status" id="ficha-status" role="status"></p>
+      <ul class="ficha-entrega">
+        <li>Retirada na loja: ${LOJA}</li>
+        <li>Entrega em Cravinhos ou envio para outras cidades</li>
+        <li>Pix ou cartão pelo site, ou dinheiro na retirada</li>
+      </ul>
+    </div>`;
+  mostrarVar();
+}
+/* trocar a cor ou o tamanho troca a foto e o preco */
+function mostrarVar() {
+  const p = fichaP, va = p.vars[fichaK], img = $("#ficha-img"), b = $("#ficha-add");
+  img.src = fotoP(va.f); img.alt = `${p.marca} ${p.nome}${va.n ? `, ${p.rotulo.toLowerCase()} ${va.n}` : ""}`;
+  $("#ficha-preco").textContent = reais(precoDe(p, va));
+  const nome = $("#ficha-var-nome"); if (nome) nome.textContent = va.n;
+  $("#ficha-status").textContent = "";
+  clearTimeout(b._t); b.classList.remove("adicionado");
+  b.disabled = !tem(va);
+  b.innerHTML = tem(va) ? `<svg aria-hidden="true"><use href="#i-sacola"/></svg>Adicionar ao carrinho` : "Sem estoque";
+}
+ficha.addEventListener("change", (e) => {
+  if (e.target.name === "ficha-lado") { fichaL = e.target.value; $("#ficha-lado-nome").textContent = fichaL; return; }
+  if (e.target.name !== "ficha-var") return;
+  fichaK = +e.target.value;
+  mostrarVar();
+  piscar($("#ficha-img"));
+});
+function abrirFicha(id, k, empurrar = true) {
+  const p = porId(id); if (!p) return;
+  fichaP = p; fichaK = k ?? varInicial(p); fichaL = "Direita";
+  desenharFicha();
+  if (empurrar) history.pushState({ ficha: id }, "", `#produto-${id}`);
+  clearTimeout(fichaFecha);
+  if (!ficha.open) { ficha.showModal(); requestAnimationFrame(() => requestAnimationFrame(() => ficha.classList.add("aberta"))); }
+  else ficha.classList.add("aberta");
+  ficha.scrollTop = 0;
+}
+/* fechar volta no historico, assim o botao voltar do celular tambem fecha */
+function fecharFicha(voltar = true) {
+  if (!ficha.open) return;
+  if (voltar && history.state?.ficha) { history.back(); return; }
+  if (voltar && location.hash.startsWith("#produto-")) history.replaceState(null, "", location.pathname + location.search);
+  ficha.classList.remove("aberta");
+  fichaFecha = setTimeout(() => ficha.close(), reduzir.matches ? 200 : 280);
+}
+ficha.addEventListener("cancel", (e) => { e.preventDefault(); fecharFicha(); });
+ficha.addEventListener("click", (e) => {
+  if (e.target === ficha || e.target.closest("[data-fechar-ficha]")) { fecharFicha(); return; }
+  if (e.target.closest("[data-ver-sacola]")) { fecharFicha(); abrirSacola(); }
+});
+addEventListener("popstate", () => {
+  const m = location.hash.match(/^#produto-(.+)$/);
+  if (m && porId(m[1])) abrirFicha(m[1], undefined, false); else fecharFicha(false);
+});
+
+/* ---------- carrinho ---------- */
+let itens = ler("pescao-carrinho-1", []).filter((i) => { const va = porId(i.id)?.vars[i.v]; return va && tem(va); });
+const ck = { receber: "loja", pagamento: "Pix", nome: "", cep: "", rua: "", numero: "", bairro: "", cidade: "", compl: "" };
+const produtoDe = (i) => porId(i.id);
+const varDe = (i) => produtoDe(i).vars[i.v];
+const precoItem = (i) => precoDe(produtoDe(i), varDe(i));
+function salvar() { gravar("pescao-carrinho-1", itens); contar(); }
+function contar() {
+  const n = itens.reduce((s, i) => s + i.qtd, 0);
+  $("#sacola-conta").textContent = n;
+  $("#sacola-sr").textContent = n === 1 ? "1 item no carrinho" : `${n} itens no carrinho`;
+}
+function adicionar(id, k, l) {
+  const p = porId(id), lado = p.lados ? (l || "Direita") : undefined;
+  const achado = itens.find((i) => i.id === id && i.v === k && i.l === lado);
+  if (achado) achado.qtd++; else itens.push({ id, v: k, l: lado, qtd: 1 });
+  salvar();
+  piscar($("#abrir-sacola"));
+}
+document.addEventListener("click", (e) => {
+  const abrir = e.target.closest("[data-abrir]");
+  if (abrir) { e.preventDefault(); abrirFicha(abrir.dataset.abrir); return; }
+  const b = e.target.closest("[data-adicionar]"); if (!b || b.disabled) return;
+  const naFicha = !!b.closest("#ficha"), p = porId(b.dataset.adicionar);
+  adicionar(p.id, naFicha ? fichaK : varInicial(p), naFicha ? fichaL : undefined);
+  if (naFicha) $("#ficha-status").innerHTML = `Adicionado ao carrinho. <button class="ver-sacola" type="button" data-ver-sacola>Ver o carrinho</button>`;
+  /* o botao confirma o que aconteceu e volta ao normal */
+  const texto = b.innerHTML;
+  b.classList.add("adicionado");
+  b.textContent = "No carrinho";
+  clearTimeout(b._t);
+  b._t = setTimeout(() => { b.classList.remove("adicionado"); b.innerHTML = texto; }, 1400);
+});
+
+const sacola = $("#sacola");
+let sacolaFecha;
+function abrirSacola() {
+  clearTimeout(sacolaFecha);
+  desenharSacola();
+  if (!sacola.open) sacola.showModal();
+  requestAnimationFrame(() => requestAnimationFrame(() => sacola.classList.add("aberta")));
+}
+function fecharSacola() {
+  sacola.classList.remove("aberta");
+  parar();
+  if (etapa !== "sacola") { etapa = "sacola"; pedido = null; }
+  sacolaFecha = setTimeout(() => sacola.close(), reduzir.matches ? 200 : 340);
+}
+$("#abrir-sacola").addEventListener("click", abrirSacola);
+sacola.addEventListener("cancel", (e) => { e.preventDefault(); fecharSacola(); });
+sacola.addEventListener("click", (e) => {
+  if (e.target === sacola || e.target.closest("[data-fechar]")) { fecharSacola(); return; }
+  if (e.target.closest("#pagar")) { pagar(e.target.closest("#pagar")); return; }
+  if (e.target.closest("#voltar")) { parar(); etapa = "sacola"; desenharSacola(); return; }
+  const copiar = e.target.closest("#copiar");
+  if (copiar) {
+    const campoPix = copiar.previousElementSibling;
+    (navigator.clipboard ? navigator.clipboard.writeText(campoPix.value) : Promise.reject()).catch(() => { campoPix.select(); document.execCommand("copy"); });
+    copiar.textContent = "Copiado"; depois(1600, () => { copiar.textContent = "Copiar"; });
+    return;
+  }
+  const b = e.target.closest("button[data-acao]"); if (!b) return;
+  const k = +b.dataset.i, i = itens[k];
+  if (b.dataset.acao === "mais") i.qtd++;
+  if (b.dataset.acao === "menos") i.qtd = Math.max(1, i.qtd - 1);
+  if (b.dataset.acao === "remover") itens.splice(k, 1);
+  salvar();
+  desenharSacola(b.dataset.acao === "remover" ? null : `button[data-acao="${b.dataset.acao}"][data-i="${k}"]`);
+});
+
+/* pagamento simulado: nada e cobrado nem enviado; os dados do cartao ficam so na tela */
+let etapa = "sacola", pedido = null, timers = [];
+const pagCartao = { numero: "", nome: "", validade: "", cvv: "", parcelas: "1" };
+const totalSacola = () => itens.reduce((t, i) => t + precoItem(i) * i.qtd, 0);
+const parar = () => { timers.forEach(clearTimeout); timers = []; };
+const depois = (ms, fn) => timers.push(setTimeout(fn, ms));
+const comEndereco = () => ck.receber !== "loja";
+
+const escolha = (nome, valor, titulo, det) => `<label class="escolha"><input type="radio" name="${nome}" value="${valor}"${ck[nome] === valor ? " checked" : ""}><strong>${titulo}</strong><small>${det}</small></label>`;
+const pilula = (nome, valor, desligada = false) => `<label class="pilula"><input type="radio" name="${nome}" value="${valor}"${ck[nome] === valor ? " checked" : ""}${desligada ? " disabled" : ""}><span>${valor}</span></label>`;
+const campo = (k, rotulo, attrs = "", largo = false) => `<label class="campo${largo ? " campo-largo" : ""}"><span>${rotulo}</span><input data-k="${k}" value="${esc(ck[k])}" ${attrs}></label>`;
+const campoCartao = (k, rotulo, attrs = "", largo = false) => `<label class="campo${largo ? " campo-largo" : ""}"><span>${rotulo}</span><input data-c="${k}" value="${esc(pagCartao[k])}" autocomplete="off" ${attrs}></label>`;
+const vazioIcone = `<svg viewBox="0 0 40 96" aria-hidden="true"><use href="#i-boia"/></svg>`;
+
+function desenharSacola(focar) {
+  const corpo = $("#sacola-corpo"), pe = $("#sacola-pe");
+  if (etapa === "pix") return desenharPix();
+  if (etapa === "aprovado") return desenharAprovado();
+  if (!itens.length) {
+    corpo.innerHTML = `<div class="vazia">${vazioIcone}<p>Seu carrinho está vazio.</p><a class="btn btn-linha" href="#produtos" data-fechar>Ver os produtos</a></div>`;
+    pe.innerHTML = "";
+    return;
+  }
+  if (ck.receber !== "loja" && ck.pagamento === "Dinheiro") ck.pagamento = "Pix";
+  corpo.innerHTML = `
+    <ul class="itens">${itens.map((i, k) => { const p = produtoDe(i), va = varDe(i), d = detalhe(p, va, i.l); return `
+      <li class="item">
+        <img src="${fotoP(va.f)}" width="68" height="68" alt="">
+        <h3>${esc(p.marca)} ${esc(p.nome)}</h3>
+        ${d ? `<p class="item-var">${esc(d)}</p>` : ""}
+        <div class="item-linha">
+          <div class="qtd"><button type="button" data-acao="menos" data-i="${k}" aria-label="Diminuir quantidade">−</button><output aria-live="polite">${i.qtd}</output><button type="button" data-acao="mais" data-i="${k}" aria-label="Aumentar quantidade">+</button></div>
+          <strong class="item-preco">${reais(precoItem(i) * i.qtd)}</strong>
+          <button class="remover" type="button" data-acao="remover" data-i="${k}">Remover</button>
+        </div>
+      </li>`; }).join("")}</ul>
+    <fieldset class="bloco">
+      <legend>Como você quer receber</legend>
+      <div class="escolhas">
+        ${escolha("receber", "loja", "Retirar na loja", esc(LOJA))}
+        ${escolha("receber", "entrega", "Entrega em Cravinhos", "A taxa é informada pelo WhatsApp")}
+        ${escolha("receber", "envio", "Envio para outra cidade", "O frete é calculado pelo CEP e informado pelo WhatsApp")}
+      </div>
+    </fieldset>
+    <div class="campos" id="endereco"${comEndereco() ? "" : " hidden"}>
+      ${campo("cep", "CEP <small>(preenche a rua)</small>", 'inputmode="numeric" autocomplete="postal-code" maxlength="9" placeholder="14140-000"')}
+      ${campo("numero", "Número", 'autocomplete="address-line2" maxlength="10"')}
+      ${campo("rua", "Rua", 'autocomplete="address-line1" maxlength="80"', true)}
+      ${campo("bairro", "Bairro", 'maxlength="50"')}
+      ${campo("cidade", "Cidade", 'autocomplete="address-level2" maxlength="50"')}
+      ${campo("compl", "Complemento <small>(opcional)</small>", 'maxlength="40"', true)}
+    </div>
+    <fieldset class="bloco">
+      <legend>Forma de pagamento</legend>
+      <div class="pilulas">${["Pix", "Cartão", "Dinheiro"].map((v) => pilula("pagamento", v, v === "Dinheiro" && ck.receber !== "loja")).join("")}</div>
+      <p class="nota"${ck.receber === "loja" ? " hidden" : ""}>Pagamento em dinheiro só na retirada na loja.</p>
+      <div class="campos cartao-campos" id="cartao"${ck.pagamento === "Cartão" ? "" : " hidden"}>
+        <label class="campo campo-largo campo-cartao"><span>Número do cartão</span><input data-c="numero" value="${esc(pagCartao.numero)}" autocomplete="off" inputmode="numeric" maxlength="23" placeholder="0000 0000 0000 0000"><span class="bandeira" id="bandeira" aria-live="polite">${bandeira(pagCartao.numero)}</span></label>
+        ${campoCartao("nome", "Nome impresso no cartão", 'maxlength="40"', true)}
+        ${campoCartao("validade", "Validade", 'inputmode="numeric" maxlength="5" placeholder="MM/AA"')}
+        ${campoCartao("cvv", "CVV", 'inputmode="numeric" maxlength="4" placeholder="123"')}
+        <label class="campo campo-largo"><span>Parcelas</span><select data-c="parcelas">${[1, 2, 3, 4].map((n) => `<option value="${n}"${pagCartao.parcelas == n ? " selected" : ""}>${n}x de ${reais(totalSacola() / n)} sem juros</option>`).join("")}</select></label>
+      </div>
+      <div class="campos" style="margin-top:.4rem">${campo("nome", "Seu nome", 'autocomplete="name" maxlength="60"', true)}</div>
+    </fieldset>
+    <details class="previa-caixa"><summary>Ver a mensagem do pedido</summary><div class="previa" id="previa" aria-live="polite"></div></details>`;
+  rodape();
+  if (focar) sacola.querySelector(focar)?.focus();
+}
+
+/* o rodape muda com a forma de pagamento: Pix e cartao pagam no site, dinheiro vai pelo WhatsApp */
+function rodape() {
+  const total = totalSacola(), pe = $("#sacola-pe");
+  const acao = ck.pagamento === "Dinheiro"
+    ? `<a class="btn btn-zap" id="enviar" href="#" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-zap"/></svg>Enviar pedido pelo WhatsApp</a>
+       <p>Você paga em dinheiro na retirada.</p>`
+    : `<button class="btn" type="button" id="pagar">${ck.pagamento === "Pix" ? `Pagar ${reais(total)} com Pix` : `Pagar ${reais(total)} no cartão`}</button>
+       <p class="erro" id="erro-pagar" role="alert" hidden></p>
+       <p>Demonstração: nenhum valor é cobrado.${ck.receber === "loja" ? "" : " A entrega ou o frete é combinado depois."}</p>`;
+  pe.innerHTML = `<p class="subtotal"><span>Subtotal</span><strong>${reais(total)}</strong></p>${acao}`;
+  mensagem();
+}
+
+function bandeira(n) {
+  n = n.replace(/\D/g, "");
+  if (/^(4011|4312|4389|4514|4576|5041|5066|5067|6277|6362|6363|6504|6505|6516)/.test(n)) return "Elo";
+  if (/^3[47]/.test(n)) return "Amex";
+  if (/^(5[1-5]|2[2-7])/.test(n)) return "Mastercard";
+  if (/^4/.test(n)) return "Visa";
+  return "";
+}
+
+/* o que falta para pagar: devolve [campo, mensagem] ou nada */
+function falta() {
+  if (comEndereco() && ck.cep.replace(/\D/g, "").length !== 8 && ck.receber === "envio") return ['[data-k="cep"]', "Informe o CEP para o envio."];
+  if (comEndereco() && !ck.rua.trim()) return ['[data-k="rua"]', "Informe a rua."];
+  if (comEndereco() && !ck.numero.trim()) return ['[data-k="numero"]', "Informe o número."];
+  if (!ck.nome.trim()) return ['[data-k="nome"]', "Informe o seu nome."];
+  if (ck.pagamento !== "Cartão") return;
+  const num = pagCartao.numero.replace(/\D/g, ""), [mm, aa] = pagCartao.validade.split("/").map(Number);
+  const hoje = new Date(), venc = new Date(2000 + (aa || 0), mm || 0, 1);
+  if (num.length < 13) return ['[data-c="numero"]', "Confira o número do cartão."];
+  if (!pagCartao.nome.trim()) return ['[data-c="nome"]', "Informe o nome impresso no cartão."];
+  if (!(mm >= 1 && mm <= 12) || venc <= hoje) return ['[data-c="validade"]', "Confira a validade do cartão."];
+  if (pagCartao.cvv.length < 3) return ['[data-c="cvv"]', "Confira o CVV."];
+}
+
+function pagar(botao) {
+  const f = falta(), erro = $("#erro-pagar");
+  if (f) { erro.textContent = f[1]; erro.hidden = false; piscar(erro); sacola.querySelector(f[0])?.focus(); return; }
+  erro.hidden = true;
+  pedido = { numero: "P" + Math.floor(1000 + Math.random() * 9000), total: totalSacola(), forma: ck.pagamento, parcelas: +pagCartao.parcelas };
+  if (ck.pagamento === "Pix") { etapa = "pix"; desenharPix(); $("#sacola-corpo").scrollTop = 0; return; }
+  botao.disabled = true;
+  botao.classList.add("girando");
+  botao.textContent = "Processando pagamento…";
+  depois(1800, aprovar);
+}
+
+/* QR Code de enfeite (nao le em banco nenhum): grade com os tres quadrados de canto */
+function qrFalso(semente) {
+  const t = 25; let x = semente, quad = "";
+  const rnd = () => (x = (x * 9301 + 49297) % 233280) / 233280;
+  const canto = (cx, cy) => `<path d="M${cx} ${cy}h7v7h-7zM${cx + 1} ${cy + 1}v5h5v-5z" fill-rule="evenodd"/><rect x="${cx + 2}" y="${cy + 2}" width="3" height="3"/>`;
+  for (let i = 0; i < t; i++) for (let j = 0; j < t; j++) {
+    const noCanto = (i < 8 && j < 8) || (i < 8 && j > t - 9) || (i > t - 9 && j < 8);
+    if (!noCanto && rnd() > .52) quad += `<rect x="${j}" y="${i}" width="1" height="1"/>`;
+  }
+  return `<svg viewBox="0 0 ${t} ${t}" shape-rendering="crispEdges" fill="#12233A" role="img" aria-label="QR Code do Pix (demonstração)">${canto(0, 0)}${canto(t - 7, 0)}${canto(0, t - 7)}${quad}</svg>`;
+}
+
+function desenharPix() {
+  const codigo = `00020126580014br.gov.bcb.pix0136pescao-demo520400005303986540${pedido.total.toFixed(2).length}${pedido.total.toFixed(2)}5802BR5906PESCAO6009CRAVINHOS62070503${pedido.numero}6304DEMO`;
+  $("#sacola-corpo").innerHTML = `<div class="pagar">
+    <span class="demo">Demonstração</span>
+    <h3>Pague com Pix</h3>
+    <p>Abra o app do seu banco, escolha Pix e leia o QR Code ou cole o código.</p>
+    <div class="qr">${qrFalso(+pedido.numero.slice(1))}</div>
+    <p class="valor">${reais(pedido.total)}</p>
+    <div class="copia"><input value="${codigo}" readonly aria-label="Código Pix copia e cola"><button class="btn btn-linha" type="button" id="copiar">Copiar</button></div>
+    <p class="status" id="status-pix" aria-live="polite"><span class="pulso" aria-hidden="true"></span><span>Aguardando o pagamento, expira em <span id="expira">10:00</span></span></p>
+  </div>`;
+  $("#sacola-pe").innerHTML = `<button class="btn btn-linha" type="button" id="voltar">Voltar para o carrinho</button>`;
+  let resta = 600;
+  const conta = () => { resta--; const el = $("#expira"); if (el) el.textContent = `${Math.floor(resta / 60)}:${String(resta % 60).padStart(2, "0")}`; if (resta > 0 && etapa === "pix") depois(1000, conta); };
+  depois(1000, conta);
+  /* na demonstracao o banco "confirma" sozinho depois de alguns segundos */
+  depois(7000, () => {
+    if (etapa !== "pix") return;
+    const st = $("#status-pix");
+    st.classList.add("pago");
+    st.lastElementChild.textContent = "Pagamento recebido!";
+    depois(1100, aprovar);
+  });
+}
+
+function aprovar() {
+  parar();
+  pedido.texto = textoPedido(true);
+  pedido.receber = ck.receber;
+  itens = []; salvar();
+  etapa = "aprovado";
+  desenharAprovado();
+}
+
+function desenharAprovado() {
+  const forma = pedido.forma === "Pix" ? "no Pix" : `no cartão${pedido.parcelas > 1 ? ` em ${pedido.parcelas}x` : ""}`;
+  const combinar = { loja: "a retirada na loja", entrega: "a entrega", envio: "o envio" }[pedido.receber];
+  $("#sacola-corpo").innerHTML = `<div class="aprovado">
+    <svg viewBox="0 0 84 84" aria-hidden="true"><circle cx="42" cy="42" r="42"/><path d="M27 43l10 10 20-21"/></svg>
+    <h3>Pagamento aprovado</h3>
+    <p><span class="numero">Pedido ${pedido.numero}</span><br>${reais(pedido.total)} ${forma}</p>
+    <p>Envie o pedido para a nossa equipe pelo WhatsApp para combinar ${combinar}.</p>
+    <span class="demo">Demonstração: nenhum valor foi cobrado</span>
+  </div>`;
+  $("#sacola-pe").innerHTML = `<a class="btn btn-zap" href="${zap(pedido.texto)}" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-zap"/></svg>Enviar pedido pelo WhatsApp</a>
+    <button class="btn btn-linha" type="button" data-fechar>Continuar comprando</button>`;
+  $("#sacola-corpo").scrollTop = 0;
+}
+
+function textoPedido(pago) {
+  const linhas = [pago ? `Olá! Fiz o pedido ${pedido.numero} pelo site:` : "Olá! Gostaria de fazer um pedido pelo site:"];
+  itens.forEach((i) => { const p = produtoDe(i), d = detalhe(p, varDe(i), i.l); linhas.push(`- ${i.qtd}x ${p.marca} ${p.nome}${d ? ` (${d})` : ""}: ${reais(precoItem(i) * i.qtd)}`); });
+  linhas.push(`Subtotal: ${reais(totalSacola())}`);
+  if (comEndereco()) {
+    const n = ck.numero.trim(), ruaNum = ck.rua.trim() ? `${ck.rua.trim()}${n ? ", " + n : ""}` : (n ? `nº ${n}` : "");
+    const partes = [ruaNum, ck.compl.trim(), ck.bairro.trim(), ck.cidade.trim()].filter(Boolean);
+    const end = partes.length ? partes.join(", ") : "endereço a combinar";
+    linhas.push(`${ck.receber === "envio" ? "Envio para" : "Entrega em"}: ${end}${ck.cep.trim() ? ` (CEP ${ck.cep.trim()})` : ""}`);
+  } else linhas.push(`Vou retirar na loja: ${LOJA}`);
+  if (pago) linhas.push(`Pagamento: ${pedido.forma === "Pix" ? "Pix" : `cartão${pedido.parcelas > 1 ? ` em ${pedido.parcelas}x` : ""}`}, aprovado no site`);
+  else linhas.push(`Pagamento: ${ck.pagamento === "Dinheiro" ? "dinheiro, na retirada" : ck.pagamento}`);
+  if (ck.nome.trim()) linhas.push(`Meu nome é ${ck.nome.trim()}.`);
+  linhas.push(ck.receber === "envio" ? "Poderiam confirmar o pedido e o valor do frete?" : ck.receber === "entrega" ? "Poderiam confirmar o pedido e a taxa de entrega?" : "Poderiam confirmar o pedido?");
+  return linhas.join("\n");
+}
+function mensagem() {
+  const texto = textoPedido(false);
+  const previa = $("#previa"); if (previa) previa.textContent = texto;
+  const enviar = $("#enviar"); if (enviar) enviar.href = zap(texto);
+}
+
+let ultimoCep = "";
+async function buscarCep() {
+  const n = ck.cep.replace(/\D/g, "");
+  if (n.length !== 8 || n === ultimoCep) return;
+  ultimoCep = n;
+  try {
+    const r = await fetch(`https://viacep.com.br/ws/${n}/json/`);
+    const d = await r.json();
+    if (d.erro) return;
+    Object.assign(ck, { rua: d.logradouro || ck.rua, bairro: d.bairro || ck.bairro, cidade: d.localidade ? `${d.localidade} (${d.uf})` : ck.cidade });
+    ["rua", "bairro", "cidade"].forEach((k) => { const el = sacola.querySelector(`[data-k="${k}"]`); if (el) { el.value = ck[k]; piscar(el); } });
+    mensagem();
+  } catch {}
+}
+sacola.addEventListener("input", (e) => {
+  const t = e.target;
+  if (t.dataset.k) {
+    if (t.dataset.k === "cep") { t.value = t.value.replace(/\D/g, "").replace(/^(\d{5})(\d)/, "$1-$2").slice(0, 9); }
+    ck[t.dataset.k] = t.value;
+    if (t.dataset.k === "cep") buscarCep();
+  }
+  if (t.dataset.c && t.tagName === "INPUT") {
+    const d = t.value.replace(/\D/g, "");
+    if (t.dataset.c === "numero") { t.value = d.slice(0, 19).replace(/(\d{4})(?=\d)/g, "$1 "); $("#bandeira").textContent = bandeira(d); }
+    if (t.dataset.c === "validade") t.value = d.slice(0, 4).replace(/^(\d{2})(\d)/, "$1/$2");
+    if (t.dataset.c === "cvv") t.value = d.slice(0, 4);
+    pagCartao[t.dataset.c] = t.value;
+  }
+  const erro = $("#erro-pagar"); if (erro) erro.hidden = true;
+  mensagem();
+});
+sacola.addEventListener("change", (e) => {
+  const t = e.target;
+  if (t.dataset.c === "parcelas") { pagCartao.parcelas = t.value; return; }
+  if (t.name !== "receber" && t.name !== "pagamento") return;
+  const eraCartao = ck.pagamento === "Cartão", eraEndereco = comEndereco();
+  ck[t.name] = t.value;
+  desenharSacola(`input[name="${t.name}"][value="${ck[t.name]}"]`);
+  if (ck.pagamento === "Cartão" && !eraCartao) piscar($("#cartao"));
+  if (comEndereco() && !eraEndereco) piscar($("#endereco"));
+  piscar($("#previa"));
+});
+contar();
+
+/* ---------- monte seu equipamento ---------- */
+const eq = { peixe: "tilapia", tem: "nao" };
+$("#peixes").innerHTML = Object.entries(PEIXES).map(([id, f]) => `<label class="peixe"><input type="radio" name="peixe" value="${id}"${id === eq.peixe ? " checked" : ""}><strong>${f.nome}</strong><small>${f.onde}</small></label>`).join("");
+/* cada sugestao vira [produto, indice da variacao, manivela] */
+const montar = (lista) => lista.map(([id, n, l]) => { const p = porId(id), k = Math.max(0, p.vars.findIndex((va) => va.n === n)); return { p, k, l }; });
+function listaAtual() {
+  const f = PEIXES[eq.peixe];
+  return { f, conjunto: eq.tem === "nao" ? montar(f.conjunto) : [], resto: montar(f.resto) };
+}
+const linhaLista = ({ p, k, l }) => {
+  const va = p.vars[k], d = detalhe(p, va, l);
+  return `<li><img src="${fotoP(va.f)}" width="56" height="56" alt="" loading="lazy"><a href="#produto-${p.id}" data-abrir="${p.id}">${esc(p.nome)}</a><small>${esc(p.marca)}${d ? `, ${esc(d)}` : ""}</small><strong>${reais(precoDe(p, va))}</strong></li>`;
+};
+function desenharLista() {
+  const { f, conjunto, resto } = listaAtual(), todos = [...conjunto, ...resto];
+  const total = todos.reduce((t, { p, k }) => t + precoDe(p, p.vars[k]), 0);
+  $("#lista").innerHTML = `
+    <h3>Sua lista para ${f.nome.toLowerCase()}</h3>
+    ${conjunto.length ? `<div class="lista-grupo"><p>${conjunto.length > 1 ? "Vara e molinete ou carretilha" : conjunto[0].p.cat === "varas" && !conjunto[0].p.lados ? "Vara" : "Vara e carretilha"}</p><ul>${conjunto.map(linhaLista).join("")}</ul></div>` : ""}
+    <div class="lista-grupo"><p>Linha, anzol e isca</p><ul>${resto.map(linhaLista).join("")}</ul></div>
+    <p class="lista-total"><span>${todos.length} itens</span><strong>${reais(total)}</strong></p>
+    <div class="lista-botoes">
+      <button class="btn" type="button" id="lista-add"><svg aria-hidden="true"><use href="#i-sacola"/></svg>Adicionar tudo ao carrinho</button>
+      <a class="btn btn-linha" id="lista-zap" href="${zap(textoLista(todos, f))}" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-zap"/></svg>Confirmar a lista pelo WhatsApp</a>
+    </div>
+    <p class="lista-status" id="lista-status" role="status"></p>
+    <p class="lista-nota">Sugestão inicial da nossa equipe. Na loja, ajustamos o equipamento ao local e ao tamanho do peixe.</p>`;
+}
+const textoLista = (todos, f) => [`Olá! Vou pescar ${f.nome.toLowerCase()} (${f.onde.toLowerCase()}) e montei esta lista pelo site:`, ...todos.map(({ p, k, l }) => { const d = detalhe(p, p.vars[k], l); return `- ${p.marca} ${p.nome}${d ? ` (${d})` : ""}`; }), "Poderiam confirmar se o equipamento está adequado?"].join("\n");
+$("#equipamento").addEventListener("change", (e) => {
+  if (e.target.name === "peixe") eq.peixe = e.target.value;
+  else if (e.target.name === "tem") eq.tem = e.target.value;
+  else return;
+  desenharLista();
+  piscar($("#lista"));
+});
+$("#equipamento").addEventListener("click", (e) => {
+  if (!e.target.closest("#lista-add")) return;
+  const { conjunto, resto } = listaAtual(), todos = [...conjunto, ...resto];
+  todos.forEach(({ p, k, l }) => adicionar(p.id, k, l));
+  $("#lista-status").innerHTML = `${todos.length} itens adicionados ao carrinho. <button class="ver-sacola" type="button" id="lista-ver">Ver o carrinho</button>`;
+});
+$("#equipamento").addEventListener("click", (e) => { if (e.target.closest("#lista-ver")) abrirSacola(); });
+desenharLista();
+
+/* ---------- destaques: arrasta, setas e pontos; passam sozinhos ate a pessoa mexer ---------- */
+(() => {
+  const trilho = $("#destaques"), slides = [...trilho.children], pontos = $("#pontos"), caixa = $("#destaques-caixa");
+  pontos.innerHTML = slides.map((_, k) => `<button class="ponto" type="button" aria-label="Destaque ${k + 1}"></button>`).join("");
+  const botoes = [...pontos.children];
+  let atual = 0, timer = null, espera;
+  const pintar = () => {
+    botoes.forEach((b, k) => b.setAttribute("aria-current", String(k === atual)));
+    slides.forEach((sl, k) => { sl.inert = k !== atual; });
+    caixa.classList.toggle("no-escuro", slides[atual].classList.contains("destaque-escuro"));
+  };
+  const ir = (k, suave = true) => {
+    atual = (k + slides.length) % slides.length;
+    pintar();
+    trilho.scrollTo({ left: atual * trilho.clientWidth, behavior: suave && !reduzir.matches ? "smooth" : "auto" });
+  };
+  const marcar = () => {
+    atual = Math.min(slides.length - 1, Math.max(0, Math.round(trilho.scrollLeft / trilho.clientWidth)));
+    pintar();
+  };
+  trilho.addEventListener("scroll", () => { clearTimeout(espera); espera = setTimeout(marcar, 120); }, { passive: true });
+  const pausar = () => { clearInterval(timer); timer = null; };
+  const tocar = () => { if (!reduzir.matches && !timer) timer = setInterval(() => ir(atual + 1), 6500); };
+  botoes.forEach((b, k) => b.addEventListener("click", () => { pausar(); ir(k); }));
+  $("#destaque-ant").addEventListener("click", () => { pausar(); ir(atual - 1); });
+  $("#destaque-prox").addEventListener("click", () => { pausar(); ir(atual + 1); });
+  ["pointerdown", "wheel", "touchstart"].forEach((ev) => trilho.addEventListener(ev, pausar, { passive: true }));
+  caixa.addEventListener("mouseenter", pausar);
+  caixa.addEventListener("focusin", pausar);
+  document.addEventListener("visibilitychange", () => { if (document.hidden) pausar(); });
+  addEventListener("resize", () => ir(atual, false));
+  marcar(); tocar();
+})();
+
+/* ---------- botao do canto: aparece depois da abertura e sai no rodape ---------- */
+const flutuante = $("#flutuante");
+flutuante.href = zap("Olá! Vim pelo site do Pescão e gostaria de atendimento.");
+function mostrarFlutuante() {
+  const passou = $(".destaques-secao").getBoundingClientRect().bottom < 0 && $(".rodape").getBoundingClientRect().top > innerHeight;
+  flutuante.classList.toggle("visivel", passou);
+  flutuante.tabIndex = passou ? 0 : -1;
+}
+addEventListener("scroll", mostrarFlutuante, { passive: true });
+
+/* ---------- menu do celular ---------- */
+const topo = $(".topo"), menuBotao = $("#menu-botao");
+function menu(abrir) {
+  topo.classList.toggle("menu-aberto", abrir);
+  menuBotao.setAttribute("aria-expanded", String(abrir));
+  menuBotao.setAttribute("aria-label", abrir ? "Fechar menu" : "Abrir menu");
+}
+menuBotao.addEventListener("click", () => menu(!topo.classList.contains("menu-aberto")));
+$("#menu").addEventListener("click", (e) => { if (e.target.closest("a")) menu(false); });
+document.addEventListener("click", (e) => { if (!topo.contains(e.target)) menu(false); });
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape" && topo.classList.contains("menu-aberto")) { menu(false); menuBotao.focus(); }
+});
+matchMedia("(min-width: 60.01em)").addEventListener("change", (m) => { if (m.matches) menu(false); });
+
+mostrarFlutuante();
+const pedidoNoLink = location.hash.match(/^#produto-(.+)$/);
+if (pedidoNoLink && porId(pedidoNoLink[1])) abrirFicha(pedidoNoLink[1], undefined, false);
+</script>
+</body>
+</html>
