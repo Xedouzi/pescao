@@ -3,10 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="color-scheme" content="light dark">
-<meta name="theme-color" content="#0B2B45" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#0F1A26" media="(prefers-color-scheme: dark)">
-<!-- o site tem modo escuro proprio: a extensao Dark Reader nao mexe -->
+<meta name="color-scheme" content="only light">
+<meta name="theme-color" content="#0B2B45">
+<!-- o site e sempre claro: a extensao Dark Reader nao mexe -->
 <meta name="darkreader-lock">
 <title>Pescão | Artigos para pesca em Cravinhos</title>
 <meta name="description" content="Molinetes, carretilhas, varas, iscas, linhas e anzóis. Compre pelo site e retire na loja, receba em Cravinhos ou peça o envio para outra cidade. R. Sante Pieri, 131, Cravinhos (SP).">
@@ -37,8 +36,8 @@
      com a BOIA boiando na entrada do "Monte seu equipamento".
      ============================================================ */
   :root {
-    /* claro e escuro: as cores do escuro ficam no fim do estilo, e o navegador nao escurece o site sozinho */
-    color-scheme: light dark;
+    /* "only light": o site e sempre claro e o navegador nao escurece sozinho */
+    color-scheme: only light;
     --branco:   #FFFFFF;
     --nevoa:    #EEF3F8;   /* fundo frio das faixas claras */
     --nevoa-2:  #E1EBF5;
@@ -525,60 +524,6 @@
   @media (max-width: 600px) { .flutuante { width: 56px; height: 56px; } .flutuante svg { width: 27px; height: 27px; } }
   @media (prefers-reduced-motion: reduce) { .flutuante { transition: none; transform: none; } }
 
-  /* ---------- modo escuro: agua funda a noite, o azul do logo clareado para ler no escuro ---------- */
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --branco:   #0F1A26;   /* fundo da pagina e dos cartoes */
-      --nevoa:    #0A131D;   /* faixas: mais fundas que os cartoes */
-      --nevoa-2:  #16263A;
-      --azul:     #8AB8F5;   /* botao azul claro com texto escuro; link 8:1 no fundo */
-      --azul-2:   #A9CBF8;
-      --azul-claro: #1A3352;
-      --tinta:    #E6EEF7;
-      --tinta-2:  #A9B8C9;
-      --linha:    #22344A;
-      --linha-forte: #6F8399;
-    }
-    html { background: var(--branco); scrollbar-color: #3E5670 var(--branco); }
-    /* texto escuro em cima do azul claro */
-    .btn, .sacola-botao { color: #0A1A2B; }
-    .btn-branco, .btn-linha { color: var(--tinta); }
-    .btn-zap { color: #fff; }
-    .sacola-botao .conta { background: #0A1A2B; color: #fff; }
-    .redes a:hover { color: #0A1A2B; }
-    /* selecionado: claro sobre o escuro */
-    .btn.adicionado, .opcao input:checked + span, .pilula:has(input:checked) { background: var(--tinta); color: var(--branco); }
-    /* banners de produto: a foto tem fundo branco, entao fica numa placa clara dentro da faixa escura */
-    .destaque:not(.destaque-escuro) { background: #132131; }
-    .destaque:not(.destaque-escuro) .destaque-foto { margin: 1.6rem 4.6rem 2.8rem 0; padding: 1rem; border-radius: 18px; background: var(--cor); }
-    .ponto::before { background: rgba(255, 255, 255, .3); }
-    .ponto[aria-current="true"]::before { background: var(--tinta); }
-    /* fotos de produto: sempre no branco */
-    .categoria span:first-child, .produto-foto, .ficha-foto, .lista li img { background: #fff; }
-    .categoria-todos span:first-child { background: var(--azul-claro); }
-    /* linha d'agua: as ondas seguem as cores das faixas */
-    .agua-linha path[fill="#EEF3F8"] { fill: var(--nevoa); }
-    .agua-linha path[fill="#FFFFFF"] { fill: var(--branco); }
-    .agua-linha path[stroke="#C9D8E8"] { stroke: var(--linha); }
-    #i-boia path[stroke="#12233A"] { stroke: #A9B8C9; }
-    /* monte seu equipamento: o escolhido fica branco, com texto escuro */
-    .peixe:has(input:checked), .tem:has(input:checked) { color: #12233A; }
-    .peixe:has(input:checked) small, .tem:has(input:checked) small { color: #4A5B6E; }
-    /* mapa do Google no escuro; o fundo branco invertido fica escuro enquanto o mapa carrega */
-    .chegar-mapa { background: #fff; filter: invert(.9) hue-rotate(180deg); }
-    .ficha, .sacola { box-shadow: 0 0 0 1px var(--linha); }
-    .ficha::backdrop, .sacola::backdrop { background: rgba(0, 0, 0, .7); }
-    .previa { background: #005C4B; color: #E9EDEF; }
-    .sacola-pe .erro { color: #FF8A80; }
-    .status.pago { color: #5FD38D; }
-    .status.pago .pulso { background: #5FD38D; }
-    .aprovado circle { fill: #173D27; }
-    .aprovado path { stroke: #5FD38D; }
-  }
-  @media (prefers-color-scheme: dark) and (max-width: 760px) {
-    /* largura fixa: com aspect-ratio a margem lateral nao encolhe a placa */
-    .destaque:not(.destaque-escuro) .destaque-foto { justify-self: center; width: calc(100% - 7.2rem); margin: .9rem 0 0; padding: .6rem; }
-  }
 </style>
 <script>document.documentElement.classList.add("com-js");</script>
 </head>
