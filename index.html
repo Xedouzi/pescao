@@ -4,7 +4,10 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="light dark">
-<meta name="theme-color" content="#0B2B45">
+<meta name="theme-color" content="#0B2B45" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0F1A26" media="(prefers-color-scheme: dark)">
+<!-- o site tem modo escuro proprio: a extensao Dark Reader nao mexe -->
+<meta name="darkreader-lock">
 <title>Pescão | Artigos para pesca em Cravinhos</title>
 <meta name="description" content="Molinetes, carretilhas, varas, iscas, linhas e anzóis. Compre pelo site e retire na loja, receba em Cravinhos ou peça o envio para outra cidade. R. Sante Pieri, 131, Cravinhos (SP).">
 <!-- DEMO: remover a linha abaixo quando publicar no dominio definitivo do cliente -->
@@ -34,7 +37,7 @@
      com a BOIA boiando na entrada do "Monte seu equipamento".
      ============================================================ */
   :root {
-    /* "light dark" so para o Chrome nao escurecer o site sozinho; o body volta para o claro */
+    /* claro e escuro: as cores do escuro ficam no fim do estilo, e o navegador nao escurece o site sozinho */
     color-scheme: light dark;
     --branco:   #FFFFFF;
     --nevoa:    #EEF3F8;   /* fundo frio das faixas claras */
@@ -68,7 +71,7 @@
   *, *::before, *::after { box-sizing: border-box; }
   html { background: #FFFFFF; scrollbar-color: #9DB0C4 #FFFFFF; scroll-behavior: smooth; scroll-padding-top: 90px; -webkit-text-size-adjust: 100%; }
   @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
-  body { color-scheme: light; overflow-x: clip; margin: 0; background: var(--branco); color: var(--tinta); font: 400 1.0625rem/1.6 var(--fonte); -webkit-tap-highlight-color: transparent; }
+  body { overflow-x: clip; margin: 0; background: var(--branco); color: var(--tinta); font: 400 1.0625rem/1.6 var(--fonte); -webkit-tap-highlight-color: transparent; }
   img, svg { max-width: 100%; }
   img { height: auto; }
   [hidden] { display: none !important; }
@@ -139,7 +142,7 @@
       transition: opacity var(--dur-ui) var(--ease-out), transform var(--dur-ui) var(--ease-out), visibility 0s linear var(--dur-ui);
     }
     .menu-aberto .menu { opacity: 1; visibility: visible; transform: none; transition-delay: 0s; }
-    .menu a { display: flex; align-items: center; min-height: 52px; padding: 0; border-bottom: 1px solid var(--linha); font-size: 1.05rem; }
+    .menu a { display: flex; align-items: center; min-height: 52px; padding: 0; white-space: normal; border-bottom: 1px solid var(--linha); font-size: 1.05rem; }
     .menu a:last-child { border-bottom: 0; }
     .sacola-botao { margin-left: auto; }
   }
@@ -169,7 +172,9 @@
   .destaque-escuro h2 { color: #fff; }
   .destaque-escuro .destaque-chapeu { color: #9CC3F5; }
   .destaque-escuro .destaque-texto > p:not(.destaque-chapeu) { color: #D3E1F0; }
-  .destaque-escuro .destaque-foto { padding: 0; }
+  /* a foto da loja e em pe: fica por cima da coluna, sem esticar a altura do banner */
+  .destaque-escuro .destaque-foto { position: relative; padding: 0; }
+  .destaque-escuro .destaque-foto img { position: absolute; inset: 0; width: 100%; }
   .destaque-escuro .destaque-foto img { max-width: none; height: 100%; object-fit: cover; object-position: 50% 30%; mix-blend-mode: normal; -webkit-mask-image: linear-gradient(90deg, transparent, #000 22%); mask-image: linear-gradient(90deg, transparent, #000 22%); }
   .destaques .seta { position: absolute; top: 50%; translate: 0 -50%; z-index: 2; box-shadow: 0 6px 18px -8px rgba(11, 43, 69, .5); }
   .destaques .seta-ant { left: .9rem; }
@@ -519,6 +524,61 @@
   .flutuante svg { width: 30px; height: 30px; }
   @media (max-width: 600px) { .flutuante { width: 56px; height: 56px; } .flutuante svg { width: 27px; height: 27px; } }
   @media (prefers-reduced-motion: reduce) { .flutuante { transition: none; transform: none; } }
+
+  /* ---------- modo escuro: agua funda a noite, o azul do logo clareado para ler no escuro ---------- */
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --branco:   #0F1A26;   /* fundo da pagina e dos cartoes */
+      --nevoa:    #0A131D;   /* faixas: mais fundas que os cartoes */
+      --nevoa-2:  #16263A;
+      --azul:     #8AB8F5;   /* botao azul claro com texto escuro; link 8:1 no fundo */
+      --azul-2:   #A9CBF8;
+      --azul-claro: #1A3352;
+      --tinta:    #E6EEF7;
+      --tinta-2:  #A9B8C9;
+      --linha:    #22344A;
+      --linha-forte: #6F8399;
+    }
+    html { background: var(--branco); scrollbar-color: #3E5670 var(--branco); }
+    /* texto escuro em cima do azul claro */
+    .btn, .sacola-botao { color: #0A1A2B; }
+    .btn-branco, .btn-linha { color: var(--tinta); }
+    .btn-zap { color: #fff; }
+    .sacola-botao .conta { background: #0A1A2B; color: #fff; }
+    .redes a:hover { color: #0A1A2B; }
+    /* selecionado: claro sobre o escuro */
+    .btn.adicionado, .opcao input:checked + span, .pilula:has(input:checked) { background: var(--tinta); color: var(--branco); }
+    /* banners de produto: a foto tem fundo branco, entao fica numa placa clara dentro da faixa escura */
+    .destaque:not(.destaque-escuro) { background: #132131; }
+    .destaque:not(.destaque-escuro) .destaque-foto { margin: 1.6rem 4.6rem 2.8rem 0; padding: 1rem; border-radius: 18px; background: var(--cor); }
+    .ponto::before { background: rgba(255, 255, 255, .3); }
+    .ponto[aria-current="true"]::before { background: var(--tinta); }
+    /* fotos de produto: sempre no branco */
+    .categoria span:first-child, .produto-foto, .ficha-foto, .lista li img { background: #fff; }
+    .categoria-todos span:first-child { background: var(--azul-claro); }
+    /* linha d'agua: as ondas seguem as cores das faixas */
+    .agua-linha path[fill="#EEF3F8"] { fill: var(--nevoa); }
+    .agua-linha path[fill="#FFFFFF"] { fill: var(--branco); }
+    .agua-linha path[stroke="#C9D8E8"] { stroke: var(--linha); }
+    #i-boia path[stroke="#12233A"] { stroke: #A9B8C9; }
+    /* monte seu equipamento: o escolhido fica branco, com texto escuro */
+    .peixe:has(input:checked), .tem:has(input:checked) { color: #12233A; }
+    .peixe:has(input:checked) small, .tem:has(input:checked) small { color: #4A5B6E; }
+    /* mapa do Google no escuro; o fundo branco invertido fica escuro enquanto o mapa carrega */
+    .chegar-mapa { background: #fff; filter: invert(.9) hue-rotate(180deg); }
+    .ficha, .sacola { box-shadow: 0 0 0 1px var(--linha); }
+    .ficha::backdrop, .sacola::backdrop { background: rgba(0, 0, 0, .7); }
+    .previa { background: #005C4B; color: #E9EDEF; }
+    .sacola-pe .erro { color: #FF8A80; }
+    .status.pago { color: #5FD38D; }
+    .status.pago .pulso { background: #5FD38D; }
+    .aprovado circle { fill: #173D27; }
+    .aprovado path { stroke: #5FD38D; }
+  }
+  @media (prefers-color-scheme: dark) and (max-width: 760px) {
+    /* largura fixa: com aspect-ratio a margem lateral nao encolhe a placa */
+    .destaque:not(.destaque-escuro) .destaque-foto { justify-self: center; width: calc(100% - 7.2rem); margin: .9rem 0 0; padding: .6rem; }
+  }
 </style>
 <script>document.documentElement.classList.add("com-js");</script>
 </head>
