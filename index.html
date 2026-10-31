@@ -14,7 +14,7 @@
 <link rel="icon" href="img/logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600..800&family=Onest:wght@400..700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,600..900&family=Onest:wght@400..700&display=swap" rel="stylesheet">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -59,7 +59,7 @@
     --dur-ui: .22s;
 
     --fonte: "Onest", "Onest reserva", Arial, sans-serif;
-    --fonte-titulo: "Bricolage Grotesque", "Bricolage reserva", "Arial Narrow", Arial, sans-serif;
+    --fonte-titulo: "Archivo", "Bricolage reserva", "Arial Narrow", Arial, sans-serif;
     --largura: 1240px;
     --margem: clamp(16px, 4vw, 40px);
   }
@@ -524,6 +524,53 @@
   @media (max-width: 600px) { .flutuante { width: 56px; height: 56px; } .flutuante svg { width: 27px; height: 27px; } }
   @media (prefers-reduced-motion: reduce) { .flutuante { transition: none; transform: none; } }
 
+  /* ============================================================
+     JEITO DA CASA: o que faz esta loja nao parecer as outras.
+     Titulos estreitos de loja de esporte; faixa de agua com os fatos
+     logo abaixo do topo; banner com a borda de baixo em onda;
+     categorias como o produto solto na vitrine; selo em bandeirola.
+     ============================================================ */
+  h1, h2, h3, .marca strong { font-stretch: 78%; font-weight: 800; letter-spacing: -.01em; }
+  .destaque h2 { font-size: clamp(2.2rem, 1.3rem + 3vw, 3.9rem); line-height: .95; }
+
+  .faixa-fatos { background: var(--agua); color: #CFE0F2; }
+  .faixa-fatos .fatos { padding: .7rem 0; gap: .5rem 1.5rem; }
+  .faixa-fatos .fato { grid-template-columns: 26px minmax(0, 1fr); gap: .6rem; font-size: .86rem; line-height: 1.3; color: #CFE0F2; }
+  .faixa-fatos .fato svg { width: 26px; height: 26px; stroke: #7FB0F0; }
+  .faixa-fatos .fato strong { color: #fff; }
+  @media (max-width: 960px) {
+    .faixa-fatos .fatos { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; margin-inline: calc(var(--margem) * -1); padding-inline: var(--margem); }
+    .faixa-fatos .fatos::-webkit-scrollbar { display: none; }
+    .faixa-fatos .fato { flex: 0 0 min(15rem, 78%); scroll-snap-align: start; }
+  }
+
+  /* banner: a borda de baixo e uma linha d'agua */
+  .destaques-trilho {
+    border-radius: 22px 22px 0 0;
+    -webkit-mask: linear-gradient(#000, #000) top / 100% calc(100% - 22px) no-repeat, url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 24' preserveAspectRatio='none'%3E%3Cpath d='M0 0h1440v6c-180 18-380 20-600 6S300-4 0 12Z'/%3E%3C/svg%3E") bottom / 100% 23px no-repeat;
+    mask: linear-gradient(#000, #000) top / 100% calc(100% - 22px) no-repeat, url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 24' preserveAspectRatio='none'%3E%3Cpath d='M0 0h1440v6c-180 18-380 20-600 6S300-4 0 12Z'/%3E%3C/svg%3E") bottom / 100% 23px no-repeat;
+  }
+  .destaque-texto { padding-bottom: clamp(3.8rem, 6vw, 4.4rem); }
+  .destaques .pontos { bottom: 1.4rem; }
+  .destaques .seta { background: var(--azul); color: #fff; }
+  @media (hover: hover) and (pointer: fine) { .destaques .seta:hover { background: var(--azul-2); } }
+  .destaques-secao { padding-bottom: .4rem; }
+
+  /* categorias: o produto solto na nevoa, sem bolha, com o nome sublinhado quando escolhido */
+  .categoria span:first-child { width: min(100%, 150px); border-radius: 0; background: var(--nevoa); box-shadow: none; }
+  .categoria img { padding: 4%; mix-blend-mode: multiply; }
+  .categoria-todos span:first-child { border-radius: 50%; background: var(--azul-claro); transform: scale(.8); }
+  .categoria > span:last-child { padding-bottom: .35rem; border-bottom: 3px solid transparent; transition: border-color var(--dur-ui) ease; }
+  .categoria[aria-pressed="true"] span:first-child { box-shadow: none; }
+  .categoria[aria-pressed="true"] > span:last-child { border-bottom-color: var(--azul); color: var(--azul); }
+  .categoria-todos[aria-pressed="true"] span:first-child { box-shadow: 0 0 0 3px var(--azul); }
+
+  /* cartao: selo em bandeirola e preco grande no azul */
+  .selo { left: 0; top: .8rem; padding: .3rem 1.1rem .3rem .7rem; border-radius: 0; clip-path: polygon(0 0, 100% 0, calc(100% - 9px) 50%, 100% 100%, 0 100%); }
+  .produto { border-radius: 10px; }
+  .produto-preco { font-family: var(--fonte-titulo); font-stretch: 78%; font-size: 1.45rem; font-weight: 800; color: var(--azul); line-height: 1.1; }
+  .produto-preco small { font-family: var(--fonte); font-stretch: normal; }
+
 </style>
 <script>document.documentElement.classList.add("com-js");</script>
 </head>
@@ -557,6 +604,17 @@
     <button class="menu-botao" type="button" id="menu-botao" aria-expanded="false" aria-controls="menu" aria-label="Abrir menu"><span></span><span></span><span></span></button>
   </div>
 </header>
+
+<div class="faixa-fatos">
+  <div class="envoltorio">
+    <ul class="fatos">
+      <li class="fato"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M4 13 6 6h20l2 7M4 13h24M4 13v13h24V13M12 26v-7h8v7"/></svg><span><strong>Retire na loja</strong>R. Sante Pieri, 131</span></li>
+      <li class="fato"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M3 9h16v13H3zM19 13h5l4 5v4h-9"/><circle cx="8" cy="24" r="2.5"/><circle cx="23" cy="24" r="2.5"/></svg><span><strong>Entrega em Cravinhos</strong>Taxa informada pelo WhatsApp</span></li>
+      <li class="fato"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M5 10 16 5l11 5v12l-11 5-11-5Z"/><path d="M5 10l11 5 11-5M16 15v12"/></svg><span><strong>Envio para outras cidades</strong>Frete calculado no pedido</span></li>
+      <li class="fato"><svg viewBox="0 0 32 32" aria-hidden="true"><rect x="4" y="8" width="24" height="16" rx="3"/><path d="M4 13h24M9 19h5"/></svg><span><strong>Pix ou cartão</strong>Dinheiro na retirada</span></li>
+    </ul>
+  </div>
+</div>
 
 <section class="destaques-secao" aria-labelledby="titulo">
   <div class="envoltorio">
@@ -604,12 +662,6 @@
       <button class="seta seta-prox" type="button" id="destaque-prox" aria-label="Próximo destaque"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
       <div class="pontos" id="pontos"></div>
     </div>
-    <ul class="fatos">
-      <li class="fato"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M4 13 6 6h20l2 7M4 13h24M4 13v13h24V13M12 26v-7h8v7"/></svg><span><strong>Retire na loja</strong>R. Sante Pieri, 131</span></li>
-      <li class="fato"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M3 9h16v13H3zM19 13h5l4 5v4h-9"/><circle cx="8" cy="24" r="2.5"/><circle cx="23" cy="24" r="2.5"/></svg><span><strong>Entrega em Cravinhos</strong>Taxa informada pelo WhatsApp</span></li>
-      <li class="fato"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M5 10 16 5l11 5v12l-11 5-11-5Z"/><path d="M5 10l11 5 11-5M16 15v12"/></svg><span><strong>Envio para outras cidades</strong>Frete calculado no pedido</span></li>
-      <li class="fato"><svg viewBox="0 0 32 32" aria-hidden="true"><rect x="4" y="8" width="24" height="16" rx="3"/><path d="M4 13h24M9 19h5"/></svg><span><strong>Pix ou cartão</strong>Dinheiro na retirada</span></li>
-    </ul>
   </div>
 </section>
 
