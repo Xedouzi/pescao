@@ -652,6 +652,14 @@
   @media (hover: hover) and (pointer: fine) { .destaques .seta:hover { background: var(--azul-2); } }
   .destaques-secao { padding-bottom: .4rem; }
 
+  /* banner do kit: as varas saem pela direita do banner e somem aos poucos na esquerda; carretilha e linha ficam inteiras */
+  .destaque-kit .destaque-foto { position: relative; padding: 0; }
+  .destaque-kit .destaque-foto img { position: absolute; top: .8rem; right: 0; width: auto; max-width: 100%; height: calc(100% - 3rem); object-fit: contain; object-position: right center; -webkit-mask-image: linear-gradient(90deg, transparent, #000 16%); mask-image: linear-gradient(90deg, transparent, #000 16%); }
+  @media (max-width: 760px) {
+    .destaque-kit .destaque-foto { width: 100%; padding: 0; } /* sem o width, o aspect-ratio alarga a caixa e a foto passa da borda */
+    .destaque-kit .destaque-foto img { top: .6rem; width: auto; max-width: 100%; height: calc(100% - .8rem); }
+  }
+
   /* categorias: o produto solto na nevoa, sem bolha, com o nome sublinhado quando escolhido */
   .categoria span:first-child { width: min(100%, 150px); border-radius: 0; background: var(--nevoa); box-shadow: none; }
   .categoria img { padding: 4%; mix-blend-mode: multiply; }
@@ -742,13 +750,13 @@
     <h1 class="so-leitor" id="titulo">Pescão: artigos para pesca em Cravinhos</h1>
     <div class="destaques" id="destaques-caixa" role="region" aria-roledescription="carrossel" aria-label="Destaques da loja">
       <ul class="destaques-trilho" id="destaques">
-        <li class="destaque" style="--cor:#E3EDF9" aria-roledescription="destaque" aria-label="1 de 4">
+        <li class="destaque destaque-kit" style="--cor:#E3EDF9" aria-roledescription="destaque" aria-label="1 de 4">
           <div class="destaque-texto">
             <h2>Kit vara e carretilha Crobat</h2>
             <p>Vara e carretilha Maruri combinadas, em quatro cores.</p>
             <button class="btn" type="button" data-produto="kit-crobat">Ver o kit</button>
           </div>
-          <div class="destaque-foto"><img src="img/banner-kit.webp" width="1200" height="1000" alt="Kit de pesca Crobat da Maruri, com vara, carretilha e linha" fetchpriority="high"></div>
+          <div class="destaque-foto"><img src="img/banner-kit.webp" width="1064" height="1050" alt="Kit de pesca Crobat da Maruri, com vara, carretilha e linha" fetchpriority="high"></div>
         </li>
         <li class="destaque" style="--cor:#DDEFEC" aria-roledescription="destaque" aria-label="2 de 4">
           <div class="destaque-texto">
