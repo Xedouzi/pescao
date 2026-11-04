@@ -652,9 +652,9 @@
   @media (hover: hover) and (pointer: fine) { .destaques .seta:hover { background: var(--azul-2); } }
   .destaques-secao { padding-bottom: .4rem; }
 
-  /* banner do kit: as varas saem pela direita do banner e somem aos poucos na esquerda; carretilha e linha ficam inteiras */
+  /* banner do kit: as varas saem pela direita do banner e somem aos poucos na esquerda; carretilha e linha ficam inteiras. O right de 2px evita que a ponta das varas apareca na borda do banner seguinte */
   .destaque-kit .destaque-foto { position: relative; padding: 0; }
-  .destaque-kit .destaque-foto img { position: absolute; top: .8rem; right: 0; width: auto; max-width: 100%; height: calc(100% - 3rem); object-fit: contain; object-position: right center; -webkit-mask-image: linear-gradient(90deg, transparent, #000 16%); mask-image: linear-gradient(90deg, transparent, #000 16%); }
+  .destaque-kit .destaque-foto img { position: absolute; top: .8rem; right: 2px; width: auto; max-width: 100%; height: calc(100% - 3rem); object-fit: contain; object-position: right center; -webkit-mask-image: linear-gradient(90deg, transparent, #000 16%); mask-image: linear-gradient(90deg, transparent, #000 16%); }
   @media (max-width: 760px) {
     .destaque-kit .destaque-foto { width: 100%; padding: 0; } /* sem o width, o aspect-ratio alarga a caixa e a foto passa da borda */
     .destaque-kit .destaque-foto img { top: .6rem; width: auto; max-width: 100%; height: calc(100% - .8rem); }
